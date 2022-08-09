@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "857606626638",
+    "project_id": "cookry-app",
+    "storage_bucket": "cookry-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857606626638:android:26b0416407539f956bd21f",
+        "android_client_info": {
+          "package_name": "com.brainque.cookry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857606626638-g5u63a56mk9pn76j5n09hhdu3nqq91bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJpEZweCjDCyUpdDJojX1zuatc8Rt_3OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857606626638-g5u63a56mk9pn76j5n09hhdu3nqq91bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
