@@ -7,6 +7,7 @@
     <color name="bg">#F9F9F9</color>
     <color name="share_section_bg">#EFEFEF</color>
 
+
     <color name="white">#FFFFFF</color>
     <color name="white_light">#c8c8c8</color>
     <color name="button_google_line_login">#EA4235</color>
@@ -41,5 +42,13 @@
     <color name="review_bg">#F2F2F2</color>
     <color name="review_list_bg_1">#E5E5E5</color>
     <color name="review_list_bg_2">#F2F2F2</color>
+
+    <color name="dark_black">#000000</color>
+    <color name="red">#33EA4335</color>
+    <color name="light_blue">#333B5998</color>
+    <color name="light_green">#25A04F</color>
+    <color name="light_gray">#CBCBCB</color>
+    <color name="light_gray_abt">#7C7C7C</color>
+    <color name="green_abt">#F1FFF6</color>
 
 </resources>

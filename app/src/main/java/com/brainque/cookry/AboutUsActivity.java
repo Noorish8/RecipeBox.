@@ -2,6 +2,7 @@ package com.brainque.cookry;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.brainque.fragment.SettingFragment;
 import com.brainque.item.ItemAbout;
 import com.brainque.util.API;
 import com.brainque.util.Constant;
@@ -33,7 +36,8 @@ import libs.mjn.prettydialog.PrettyDialogCallback;
 public class AboutUsActivity extends AppCompatActivity {
 
     TextView txtAppName, txtVersion, txtCompany, txtEmail, txtWebsite, txtContact;
-    ImageView imgAppLogo;
+    TextView imgAppLogo;
+    View     back;
     ArrayList<ItemAbout> mListItem;
     ScrollView mScrollView;
     ProgressBar mProgressBar;
@@ -51,9 +55,9 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
         JsonUtils.setStatusBarGradiant(AboutUsActivity.this);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.menu_about));
-        setSupportActionBar(toolbar);
+//        toolbar = findViewById(R.id.toolbar);
+//        toolbar.setTitle(getString(R.string.menu_about));
+      //  setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -62,16 +66,27 @@ public class AboutUsActivity extends AppCompatActivity {
         jsonUtils = new JsonUtils(this);
         jsonUtils.forceRTLIfSupported(getWindow());
 
-        txtAppName = findViewById(R.id.text_app_name);
-        txtVersion = findViewById(R.id.text_version);
-        txtCompany = findViewById(R.id.text_company);
-        txtEmail = findViewById(R.id.text_email);
-        txtWebsite = findViewById(R.id.text_website);
-        txtContact = findViewById(R.id.text_contact);
-        imgAppLogo = findViewById(R.id.app_logo_about_us);
+        txtAppName = findViewById(R.id.txt_cook);
+        txtVersion = findViewById(R.id.txt_virsion);
+        txtCompany = findViewById(R.id.txt_company);
+        txtEmail = findViewById(R.id.txt_email);
+        txtWebsite = findViewById(R.id.txt_website);
+        txtContact = findViewById(R.id.txt_contact);
+        imgAppLogo = findViewById(R.id.txt_about);
         webView = findViewById(R.id.webView);
+        back =findViewById(R.id.img_back_arrow);
+      //  back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//               //onBackPressed();
+//                Intent intent = new Intent(AboutUsActivity.this, SettingFragment.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(intent);
+//                //finish();
+//            }
+     //   });
 
-        mScrollView = findViewById(R.id.scrollView);
+                mScrollView = findViewById(R.id.scrollView);
         mProgressBar = findViewById(R.id.progressBar);
 
         mListItem = new ArrayList<>();
@@ -79,7 +94,7 @@ public class AboutUsActivity extends AppCompatActivity {
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
         jsObj.addProperty("method_name", "get_app_details");
         if (JsonUtils.isNetworkAvailable(AboutUsActivity.this)) {
-            new MyTaskAbout(API.toBase64(jsObj.toString())).execute(Constant.API_URL);
+            //new MyTaskAbout(API.toBase64(jsObj.toString())).execute(Constant.API_URL);
         }
 
     }
@@ -96,7 +111,7 @@ public class AboutUsActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            mProgressBar.setVisibility(View.VISIBLE);
+//            mProgressBar.setVisibility(View.VISIBLE);
             mScrollView.setVisibility(View.GONE);
         }
 
@@ -173,7 +188,7 @@ public class AboutUsActivity extends AppCompatActivity {
             txtEmail.setText(itemAbout.getAppEmail());
             txtWebsite.setText(itemAbout.getAppWebsite());
             txtContact.setText(itemAbout.getAppContact());
-            Picasso.get().load(Constant.IMAGE_PATH_URL + itemAbout.getAppLogo()).into(imgAppLogo);
+           // Picasso.get().load(Constant.IMAGE_PATH_URL + itemAbout.getAppLogo()).into(imgAppLogo);
 
             String mimeType = "text/html;charset=UTF-8";
             String encoding = "utf-8";
@@ -203,5 +218,9 @@ public class AboutUsActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(menuItem);
         }
         return true;
+    }
+    public void onBackPressed() {
+        onBackPressed();
+
     }
 }

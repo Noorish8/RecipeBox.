@@ -80,7 +80,7 @@
     <string name="contact">Contact</string>
     <string name="about">About</string>
 
-    <string name="welcome_back">Welcome Back</string>
+    <string name="welcome_back">Welcome Back !</string>
     <string name="sign_into_continue">Sign in to continue</string>
     <string name="forgot_description">Enter your email address below and  we\'ll send you email with password</string>
     <string name="button_text_forgot_password">Forgot your password?</string>
@@ -126,5 +126,14 @@
     <string name="default_notification_channel_id">Recipe Box</string>
     <string name="wanna_cook_something_delicious">Wanna Cook \nSomething Delicious?</string>
     <string name="let_s_try_our_best_recipe_simple_to_made_and_tasty">Let’s try our best recipe \nsimple to made and tasty</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="or_sing_up_with">Or sing up with</string>
+    <string name="by_signing_in_you_accept">By signing in you accept</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="password">Password</string>
+    <string name="about_us">About us</string>
+    <string name="virsion">Virsion</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_etiam_eu_turpis_molestie_dictum_est_a_mattis_tellus_sed_dignissim_metus_nec_fringilla_accumsan_risus_sem_sollicitudin_lacus_ut_interdum_tellus">Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit. Etiam eu \nturpis molestie, dictum est a, \nmattis tellus. Sed dignissim, metus nec \nfringilla accumsan, risus sem \nsollicitudin lacus, ut interdum tellus</string>
+    <string name="enable_push_notification">Enable push notification</string>
 
 </resources>

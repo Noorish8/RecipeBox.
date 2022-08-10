@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.onesignal.OneSignal;
 import com.brainque.cookry.AboutUsActivity;
@@ -20,10 +22,15 @@ import com.brainque.cookry.R;
 
 public class SettingFragment extends Fragment {
 
+    TextView lytAbout;
+    TextView lytPrivacy;
+    TextView lytMoreApp;
+    TextView layRateApp;
+    TextView layShareApp;
 
     MyApplication MyApp;
     SwitchCompat notificationSwitch;
-    LinearLayout lytAbout, lytPrivacy, lytMoreApp, layShareApp, layRateApp;
+   // LinearLayout lytAbout, lytPrivacy, lytMoreApp, layShareApp, layRateApp;
 
     @Nullable
     @Override

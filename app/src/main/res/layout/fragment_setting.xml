@@ -1,218 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/green_abt"
     tools:ignore="UseCompoundDrawables">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <View
+        android:id="@+id/img_back_arrow"
+        android:layout_width="21dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/ic_back_arround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_setting"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="Setting"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/img_back_arrow"
+        app:layout_constraintTop_toTopOf="@+id/img_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/img_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"/>
+    <ImageView
+        android:id="@+id/img_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintTop_toBottomOf="@+id/img_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/txt_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_notification"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text="@string/enable_push_notification"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/light_gray_abt"
+        android:textSize="14dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_notification"
+        app:layout_constraintTop_toTopOf="@+id/txt_notification"
+        android:theme="@style/BrandedSwitch.control"
+        android:layout_centerVertical="true" />
+    <ImageView
+        android:id="@+id/img_about_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_about_us"
+        app:layout_constraintTop_toBottomOf="@+id/img_notification"
+        app:layout_constraintStart_toStartOf="@+id/img_notification"
+        android:layout_marginTop="25dp"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
+    <TextView
+        android:id="@+id/lytAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_about_us"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text="Abous us"
+        android:textColor="@color/light_gray_abt"
+        android:layout_marginStart="25dp"
+        android:textSize="14dp"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="3dp"
-                    android:paddingBottom="3dp"
-                    android:layout_toStartOf="@+id/switch_notification"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="13dp"
-                        android:text="@string/notification_title"
-                        android:textSize="14sp"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_notification"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="10dp"
-                    android:theme="@style/BrandedSwitch.control"
-                    android:layout_centerVertical="true" />
-
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
-
-
-            <LinearLayout
-                android:id="@+id/lytAbout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="13dp"
-                    android:text="@string/menu_about"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
-
-            <LinearLayout
-                android:id="@+id/lytPrivacy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="13dp"
-                    android:text="@string/menu_privacy"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
-
-            <LinearLayout
-                android:id="@+id/lytMoreApp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="13dp"
-                    android:text="@string/menu_more"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
+    <ImageView
+        android:id="@+id/img_privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_polycy"
+        app:layout_constraintTop_toBottomOf="@+id/img_about_us"
+        app:layout_constraintStart_toStartOf="@+id/img_notification"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:id="@+id/lytPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_privacy_policy"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text="Privacy policy"
+        android:textColor="@color/light_gray_abt"
+        android:layout_marginStart="25dp"
+        android:textSize="14dp"/>
+    <ImageView
+        android:id="@+id/img_more_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_app"
+        app:layout_constraintTop_toBottomOf="@+id/img_privacy_policy"
+        app:layout_constraintStart_toStartOf="@+id/img_notification"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:id="@+id/lytMoreApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_more_app"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text=" More app"
+        android:textColor="@color/light_gray_abt"
+        android:layout_marginStart="25dp"
+        android:textSize="14dp"/>
+    <ImageView
+        android:id="@+id/img_share_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share_app"
+        app:layout_constraintTop_toBottomOf="@+id/img_more_app"
+        app:layout_constraintStart_toStartOf="@+id/img_notification"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:id="@+id/lytRateApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_share_app"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text=" Share app"
+        android:textColor="@color/light_gray_abt"
+        android:layout_marginStart="25dp"
+        android:textSize="14dp"/>
+    <ImageView
+        android:id="@+id/img_rate_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rate_app"
+        app:layout_constraintTop_toBottomOf="@+id/img_share_app"
+        app:layout_constraintStart_toStartOf="@+id/img_notification"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:id="@+id/lytShareApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/img_rate_app"
+        app:layout_constraintStart_toEndOf="@+id/img_notification"
+        android:text="Rate app"
+        android:textColor="@color/light_gray_abt"
+        android:layout_marginStart="25dp"
+        android:textSize="14dp"/>
 
 
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
-
-            <LinearLayout
-                android:id="@+id/lytShareApp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:orientation="horizontal">
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="13dp"
-                    android:text="@string/menu_share"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingTop="3dp"-->
+<!--                    android:paddingBottom="3dp"-->
+<!--                    android:layout_toStartOf="@+id/switch_notification"-->
+<!--                    android:orientation="horizontal">-->
 
 
-            </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_marginStart="13dp"-->
+<!--                        android:text="@string/notification_title"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textColor="@color/black" />-->
+<!--                </LinearLayout>-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
-
-            <LinearLayout
-                android:id="@+id/lytRateApp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="13dp"
-                    android:text="@string/menu_rate"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
+<!--                <androidx.appcompat.widget.SwitchCompat-->
+<!--                    android:id="@+id/switch_notification"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:theme="@style/BrandedSwitch.control"-->
+<!--                    android:layout_centerVertical="true" />-->
 
 
-            </LinearLayout>
+<!--            </RelativeLayout>-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/line_color" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
 
 
-        </LinearLayout>
-    </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lytAbout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:paddingBottom="3dp"-->
+<!--                android:orientation="horizontal">-->
 
-</RelativeLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginStart="13dp"-->
+<!--                    android:text="@string/menu_about"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black" />-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lytPrivacy"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:paddingBottom="3dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginStart="13dp"-->
+<!--                    android:text="@string/menu_privacy"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black" />-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lytMoreApp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:paddingBottom="3dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginStart="13dp"-->
+<!--                    android:text="@string/menu_more"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black" />-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lytShareApp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:paddingBottom="3dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginStart="13dp"-->
+<!--                    android:text="@string/menu_share"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black" />-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lytRateApp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingTop="3dp"-->
+<!--                android:paddingBottom="3dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginStart="13dp"-->
+<!--                    android:text="@string/menu_rate"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/black" />-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:background="@color/line_color" />-->
+
+
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,8 +12,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -85,9 +87,9 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
     private static SharedPreferences.Editor editor;
     boolean iswhichscreen;
     String detail_screen;
-    LinearLayout btnGm;
-    FrameLayout btnFb;
-    SmoothCheckBox checkBox;
+    ImageView btnGm;
+    ImageView btnFb;
+    CheckBox checkBox;
     //Google login
     GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 007;
