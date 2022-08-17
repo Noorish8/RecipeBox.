@@ -1,0 +1,39 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:1-9:12
+	package
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:2:5-40
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+application
+ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:7:5-32
+uses-sdk
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		ADDED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
+		INJECTED from F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
