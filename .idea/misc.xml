@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/black_cat_background.xml" value="0.1235" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/button_fb_bg.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/cursor_black.xml" value="0.1075" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custom_bg.xml" value="0.13" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custom_btn.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custom_checkbox.xml" value="0.13" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custom_edittext_bg.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custom_facebook_bg.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/custum_google_bg.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_arrow.xml" value="0.2775" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_back.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_back_arround.xml" value="0.13" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_chef_image.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_chef_image_1.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_food.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_group_btm.xml" value="0.2515" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_logosvg.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_splash_chef_image.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_splash_img.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_white_shape.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/ic_white_shape_big.xml" value="0.1285" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/drawable/statusbar_gradient.xml" value="0.1665" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/font/font.xml" value="0.23148148148148148" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/font/font_poppins.xml" value="0.23148148148148148" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_about_us.xml" value="0.25" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_detail.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_forgotpassword.xml" value="0.20555555555555555" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_main.xml" value="0.1255862428348098" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_profile_edit.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_sign_up.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/fragment_setting.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/row_latest_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/row_toolbar.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/layout/youtube.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/menu/drawer_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/menu/menu_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1235" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipeBox_V2.4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1235" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable-hdpi/custom_home_cat.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/black_latest_background.xml" value="0.129" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_bg.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_bg_rate.xml" value="0.129" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_btn.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_checkbox.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_edittext_bg.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_facebook_bg.xml" value="0.1325" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/custom_tran_bg.xml" value="0.129" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/ic_rectangle_login.xml" value="0.129" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/login_dark.xml" value="0.13" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/drawable/login_top_light.xml" value="0.13" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_profile_edit.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_sign_in.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/activity_welcome.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/content_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/fragment_category.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/fragment_home.xml" value="0.19814814814814816" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/fragment_setting.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/review_all_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/row_home_cat_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/row_home_latest_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/layout/row_latest_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/drawer_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/home_bottom_menu.xml" value="0.271875" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/menu_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/menu_profile.xml" value="0.27291666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
