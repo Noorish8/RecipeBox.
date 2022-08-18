@@ -16,7 +16,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:itemIconTint="@color/state_list"
-        app:itemTextColor="@color/state_list"
+        app:itemTextColor="@color/dark_green"
         app:menu="@menu/drawer_menu">
 
     </com.google.android.material.navigation.NavigationView>

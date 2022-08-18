@@ -6,66 +6,74 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries>
+
     <application
-        android:name="com.brainque.cookry.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:screenOrientation="portrait"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.brainque.cookry.ActivitySplash">
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity android:name=".ActivitySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.brainque.cookry.ActivityMain"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name=".ActivityMain"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.brainque.cookry.SearchActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name=".SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.brainque.cookry.AboutUsActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name=".AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.brainque.cookry.PrivacyActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name=".PrivacyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.brainque.cookry.ActivityDetail"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:name=".ActivityDetail"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.brainque.cookry.ForgotPasswordActivity"
+            android:name=".ForgotPasswordActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.brainque.cookry.ProfileEditActivity"
+            android:name=".ProfileEditActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.brainque.cookry.SignInActivity"
+            android:name=".SignInActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.brainque.cookry.SignUpActivity"
+            android:name=".SignUpActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustPan"/>
-        <!-- youtube play activity -->
+            android:windowSoftInputMode="adjustPan" /> <!-- youtube play activity -->
         <activity
             android:name="com.brainque.youtube.YoutubePlay"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensor"/>
+            android:screenOrientation="sensor" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -88,11 +96,9 @@
             android:value="@string/default_notification_channel_id" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-<!--        <meta-data-->
-<!--            android:name="preloaded_fonts"-->
-<!--            android:resource="@array/preloaded_fonts" />-->
-
+            android:value="@string/facebook_app_id" /> <!-- <meta-data -->
+        <!-- android:name="preloaded_fonts" -->
+        <!-- android:resource="@array/preloaded_fonts" /> -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -109,6 +115,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -118,13 +125,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/paths" />
         </provider>
-
     </application>
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.SEND" />
-            <data android:mimeType="*/*" />
-        </intent>
-    </queries>
 
 </manifest>

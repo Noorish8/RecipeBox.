@@ -60,7 +60,7 @@ public class LatestFragment extends Fragment {
         progressBar = rootView.findViewById(R.id.progressBar);
         recyclerView = rootView.findViewById(R.id.vertical_courses_list);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         recyclerView.setFocusable(false);
         recyclerView.setNestedScrollingEnabled(false);
 

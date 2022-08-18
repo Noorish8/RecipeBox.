@@ -84,7 +84,7 @@ public class LatestAdapter extends RecyclerView.Adapter {
             viewHolder.txt_view.setText(JsonUtils.Format(Integer.parseInt(singleItem.getRecipeViews())));
             viewHolder.ratingView.setRating(Float.parseFloat(singleItem.getRecipeAvgRate()));
 
-            viewHolder.lyt_parent.setOnClickListener(new View.OnClickListener() {
+            viewHolder.image.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     PopUpAds.ShowInterstitialAds(activity, singleItem.getRecipeId());
@@ -93,9 +93,9 @@ public class LatestAdapter extends RecyclerView.Adapter {
 
 
             if (singleItem.isFavourite()) {
-                viewHolder.image_fav.setImageResource(R.drawable.fave_hov);
+                viewHolder.image_fav.setImageResource(R.drawable.favrite_icon_fill);
             } else {
-                viewHolder.image_fav.setImageResource(R.drawable.fav_list);
+                viewHolder.image_fav.setImageResource(R.drawable.favrite_icon);
             }
 
             viewHolder.image_fav.setOnClickListener(new View.OnClickListener() {
@@ -107,9 +107,9 @@ public class LatestAdapter extends RecyclerView.Adapter {
                                 @Override
                                 public void onItemClick(boolean isSave, String message) {
                                     if (isSave) {
-                                        viewHolder.image_fav.setImageResource(R.drawable.fave_hov);
+                                        viewHolder.image_fav.setImageResource(R.drawable.favrite_icon_fill);
                                     } else {
-                                        viewHolder.image_fav.setImageResource(R.drawable.fav_list);
+                                        viewHolder.image_fav.setImageResource(R.drawable.favrite_icon);
                                     }
                                 }
                             };
@@ -275,7 +275,7 @@ public class LatestAdapter extends RecyclerView.Adapter {
             super(itemView);
             image = itemView.findViewById(R.id.image_recipe);
             image_fav = itemView.findViewById(R.id.img_fav_list);
-            lyt_parent = itemView.findViewById(R.id.rootLayout);
+            //lyt_parent = itemView.findViewById(R.id.rootLayout);//click
             txt_recipe = itemView.findViewById(R.id.text_recipe_name);
             txt_view = itemView.findViewById(R.id.text_view);
             txt_time = itemView.findViewById(R.id.text_time);

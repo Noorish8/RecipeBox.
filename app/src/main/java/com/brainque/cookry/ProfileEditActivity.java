@@ -45,7 +45,7 @@ public class ProfileEditActivity extends AppCompatActivity implements Validator.
     Toolbar toolbar;
     ProgressDialog pDialog;
     Button button_submit;
-    View view_1;
+   // View view_1;
     TextView edit_pass;
 
     @Override
@@ -58,8 +58,8 @@ public class ProfileEditActivity extends AppCompatActivity implements Validator.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_edit);
         JsonUtils.setStatusBarGradiant(ProfileEditActivity.this);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.menu_profile));
+//        toolbar = findViewById(R.id.toolbar);
+//        toolbar.setTitle(getString(R.string.menu_profile));
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -77,13 +77,13 @@ public class ProfileEditActivity extends AppCompatActivity implements Validator.
         edtPassword = findViewById(R.id.edt_password);
         edtMobile = findViewById(R.id.edt_phone);
         button_submit = findViewById(R.id.button_update);
-        view_1 = findViewById(R.id.view_1);
-        edit_pass = findViewById(R.id.edit_pass);
+       // view_1 = findViewById(R.id.view_1);
+      edit_pass = findViewById(R.id.edit_pass);
         switch (MyApp.getUserType()) {
             case "Google":
             case "Facebook":
                 edtEmail.setEnabled(false);
-                view_1.setVisibility(View.GONE);
+               // view_1.setVisibility(View.GONE);
                 edtPassword.setVisibility(View.GONE);
                 edit_pass.setVisibility(View.GONE);
                 break;

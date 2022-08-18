@@ -50,5 +50,7 @@
     <color name="light_gray">#CBCBCB</color>
     <color name="light_gray_abt">#7C7C7C</color>
     <color name="green_abt">#F1FFF6</color>
+    <color name="trans_txt">#24FFFF24</color>
+    <color name="yellow_rate">#FEC600</color>
 
 </resources>

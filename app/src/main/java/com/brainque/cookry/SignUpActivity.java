@@ -55,15 +55,15 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
     EditText edtPassword;
 
     @TextRule(order = 8, message = "Enter valid Phone Number", minLength = 0, maxLength = 14)
-    EditText edtMobile;
+   // EditText edtMobile;
 
     Button btnSignUp;
 
     String strFullname, strEmail, strPassword, strMobi, strMessage;
 
     private Validator validator;
-
-    TextView txtLogin;
+    TextView textView_signup_login;
+    Button btnSkip;
     JsonUtils jsonUtils;
     AppCompatTextView tvSignInAccept;
     AppCompatCheckBox checkBoxAgree;
@@ -73,6 +73,7 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,12 +88,13 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
         edtFullName = findViewById(R.id.editText_name_register);
         edtEmail = findViewById(R.id.editText_email_register);
         edtPassword = findViewById(R.id.editText_password_register);
-        edtMobile = findViewById(R.id.editText_phoneNo_register);
+      //  edtMobile = findViewById(R.id.editText_phoneNo_register);
 
         btnSignUp = findViewById(R.id.button_submit);
-        txtLogin = findViewById(R.id.textView_login_register);
+        btnSkip = findViewById(R.id.button_skip_login_activity);
         tvSignInAccept = findViewById(R.id.textSignUpAccept);
         checkBoxAgree = findViewById(R.id.checkbox);
+        textView_signup_login =findViewById(R.id.textView_signup_login);
 
         setAcceptText();
 
@@ -105,7 +107,7 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
             }
         });
 
-        txtLogin.setOnClickListener(new View.OnClickListener() {
+        btnSkip.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -119,6 +121,16 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
 
         validator = new Validator(this);
         validator.setValidationListener(this);
+
+
+        textView_signup_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -127,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
             strFullname = edtFullName.getText().toString().replace(" ", "%20");
             strEmail = edtEmail.getText().toString();
             strPassword = edtPassword.getText().toString();
-            strMobi = edtMobile.getText().toString();
+           // strMobi = edtMobile.getText().toString();
 
             JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
             jsObj.addProperty("method_name", "user_register");
@@ -289,4 +301,6 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
     public void showToast(String msg) {
         Toast.makeText(SignUpActivity.this, msg, Toast.LENGTH_LONG).show();
     }
+
+
 }

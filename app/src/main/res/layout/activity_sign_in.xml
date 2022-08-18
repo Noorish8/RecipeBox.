@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/dark_green">
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,8 +24,8 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="210dp"
-                android:layout_height="194dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/login_top_light"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -63,9 +61,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_edittext_bg"
-                android:drawableStart="@drawable/ic_password"
                 app:layout_constraintStart_toStartOf="@+id/editText_password_login_activity"
                 android:hint="@string/email"
+                android:paddingStart="12dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_email_login"
                 android:paddingVertical="15dp"
                 android:layout_marginBottom="18dp"
                 app:layout_constraintBottom_toTopOf="@+id/editText_password_login_activity"
@@ -77,8 +77,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_edittext_bg"
-                android:drawableStart="@drawable/ic_password"
+                android:drawableStart="@drawable/ic_password_login"
                 android:hint="@string/password"
+                android:paddingStart="12dp"
+                android:drawablePadding="10dp"
                 android:paddingVertical="15dp"
                 android:layout_marginBottom="18dp"
                 app:layout_constraintBottom_toTopOf="@+id/txt_remember"
@@ -124,7 +126,6 @@
                 android:layout_marginBottom="18dp"
                 app:layout_constraintBottom_toTopOf="@+id/button_login_activity"
                 app:layout_constraintStart_toStartOf="@+id/checkbox_login_activity"
-                android:background="@drawable/checkbox"
                 android:scaleX="0.8"
                 android:scaleY="0.8"/>
 
@@ -156,7 +157,7 @@
                 android:background="@drawable/ic_rectangle_login"
                 android:text="@string/login"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="24dp"
                 app:layout_constraintBottom_toTopOf="@+id/txt_sing_up_with" />
@@ -168,7 +169,7 @@
                 android:background="@drawable/ic_rectangle_skip"
                 android:text="@string/skip"
                 android:textColor="@color/light_green"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/button_login_activity"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="24dp"
@@ -203,8 +204,8 @@
 
             <ImageView
                 android:id="@+id/linearLayout_google_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="17dp"
                 android:src="@drawable/google_logo"
                 app:layout_constraintBottom_toBottomOf="@+id/view_google"
                 app:layout_constraintEnd_toEndOf="@+id/view_google"

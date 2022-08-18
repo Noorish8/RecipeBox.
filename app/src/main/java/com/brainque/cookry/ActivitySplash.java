@@ -103,7 +103,7 @@ public class ActivitySplash extends Activity {
 
                             if (str_package.equals(getPackageName())) {
                                 if (App.getFirstIsLogin()) {
-                                    Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
+                                    Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
                                     finish();

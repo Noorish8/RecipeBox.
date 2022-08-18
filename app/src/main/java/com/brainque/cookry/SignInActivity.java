@@ -105,6 +105,7 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,7 +145,9 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
         tvSignInAccept = findViewById(R.id.textSignUpAccept);
         checkBoxAgree = findViewById(R.id.checkbox);
 
-        setAcceptText();
+
+
+        //setAcceptText();
 
         checkBox.setChecked(false);
         if (pref.getBoolean(pref_check, false)) {

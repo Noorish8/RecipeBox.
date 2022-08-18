@@ -5,174 +5,184 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_image"
-    android:backgroundTint="@color/dark_green">
-
-
-        <ImageView
-            android:id="@+id/img_chef_bg"
-            android:layout_width="match_parent"
-            android:layout_height="470dp"
-            android:scaleType="centerCrop"
-            android:background="@color/dark_green"
-            android:src="@drawable/bg_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+    android:background="@drawable/login_splash_img">
 
     <ImageView
-        android:id="@+id/img_chef"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/chef_images"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="111dp"
+        android:layout_height="112dp"
+        android:src="@drawable/logo_splase"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
-        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:elevation="@dimen/activity_vertical_margin"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-    <ImageView
-        android:id="@+id/img_shape"
-        android:layout_width="752dp"
-        android:layout_height="530dp"
-        android:src="@drawable/white_shape"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_chef"
-        app:layout_constraintVertical_bias="0.491" />
 
-    <TextView
-        android:id="@+id/txt_wanna_cook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo"
-        android:text="@string/wanna_cook_something_delicious"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textColor="@color/dark_green"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
-        android:id="@+id/txt_try"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/let_s_try_our_best_recipe_simple_to_made_and_tasty"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/txt_wanna_cook"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/dark_green"
-        android:textSize="16sp"
-        android:layout_marginTop="18dp"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:background="@drawable/ic_group_spl_pl"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_shape"
-        app:layout_constraintVertical_bias="0.182" />
+<!--        <ImageView-->
+<!--            android:id="@+id/img_chef_bg"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="470dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:background="@color/dark_green"-->
+<!--            android:src="@drawable/bg_image"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-    <ImageView
-        android:id="@+id/img_pack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_group_spl"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_shape"
-        app:layout_constraintVertical_bias="0.185" />
 
-    <ImageView
-        android:id="@+id/img_bug"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/ic_group_spl_rt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_pack"
-        app:layout_constraintVertical_bias="0.308" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_chef"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/chef_images"-->
+<!--        app:layout_constrainedHeight="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <ImageView
-        android:id="@+id/img_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:background="@drawable/ic_food"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_pack"
-        app:layout_constraintVertical_bias="0.397" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_logo"-->
+<!--        android:layout_width="82dp"-->
+<!--        android:layout_height="82dp"-->
+<!--        android:src="@drawable/logo"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:elevation="@dimen/activity_vertical_margin"/>-->
 
-<!--    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator-->
-<!--        android:id="@+id/dots_indicator"-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_shape"-->
+<!--        android:layout_width="752dp"-->
+<!--        android:layout_height="530dp"-->
+<!--        android:src="@drawable/white_shape"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/img_chef"-->
+<!--        app:layout_constraintVertical_bias="0.491" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_wanna_cook"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        app:dotsColor="@color/white"-->
-<!--        app:dotsCornerRadius="8dp"-->
-<!--        app:dotsSize="16dp"-->
-<!--        app:dotsSpacing="4dp"-->
-<!--        app:dotsWidthFactor="2.5"-->
-<!--        app:selectedDotColor="@color/dark_green"-->
-<!--        app:progressMode="true"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btn_get"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/img_logo"-->
+<!--        android:text="@string/wanna_cook_something_delicious"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textColor="@color/dark_green"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txt_try"/>-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/txt_try"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/let_s_try_our_best_recipe_simple_to_made_and_tasty"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_wanna_cook"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:textColor="@color/dark_green"-->
+<!--        android:textSize="16sp"-->
+<!--        android:layout_marginTop="18dp"/>-->
 
-    <Button
-        android:id="@+id/btn_get"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_btn"
-        android:paddingRight="24dp"
-        android:text="Get Started"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/img_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:background="@drawable/ic_group_spl_pl"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/img_shape"-->
+<!--        app:layout_constraintVertical_bias="0.182" />-->
 
-    <ImageView
-        android:id="@+id/img_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<!--    <ImageView-->
+<!--        android:id="@+id/img_pack"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/ic_group_spl"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/img_shape"-->
+<!--        app:layout_constraintVertical_bias="0.185" />-->
 
-        android:background="@drawable/ic_group_btm"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/img_bug"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:background="@drawable/ic_group_spl_rt"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/img_pack"-->
+<!--        app:layout_constraintVertical_bias="0.308" />-->
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_get"
-        app:layout_constraintEnd_toEndOf="@+id/btn_get"
-        android:elevation="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toTopOf="@+id/btn_get" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_food"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:background="@drawable/ic_food"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/img_pack"-->
+<!--        app:layout_constraintVertical_bias="0.397" />-->
+
+<!--&lt;!&ndash;    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/dots_indicator"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:dotsColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:dotsCornerRadius="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:dotsSize="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:dotsSpacing="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:dotsWidthFactor="2.5"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:selectedDotColor="@color/dark_green"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:progressMode="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toTopOf="@+id/btn_get"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/txt_try"/>&ndash;&gt;-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_get"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/custom_btn"-->
+<!--        android:paddingRight="24dp"-->
+<!--        android:text="Get Started"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/img_bottom"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_bottom"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:background="@drawable/ic_group_btm"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_arrow"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btn_get"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btn_get"-->
+<!--        android:elevation="@dimen/activity_vertical_margin"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btn_get" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
