@@ -54,7 +54,7 @@ public class SubCategoryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_category, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_most_view, container, false);
 
         if (getArguments() != null) {
             Id = getArguments().getString("Id");

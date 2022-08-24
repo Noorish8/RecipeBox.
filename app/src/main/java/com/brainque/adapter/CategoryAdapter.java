@@ -77,7 +77,7 @@ public class CategoryAdapter extends RecyclerView.Adapter {
 
             viewHolder.text_cat.setText(singleItem.getCategoryName());
             Picasso.get().load(singleItem.getCategoryImageBig()).into(viewHolder.image);
-            Picasso.get().load(singleItem.getCategoryImageIcon()).placeholder(R.drawable.place_holder_small).into(viewHolder.image_thumb);
+        //    Picasso.get().load(singleItem.getCategoryImageIcon()).placeholder(R.drawable.place_holder_small).into(viewHolder.image_thumb);
             viewHolder.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -225,7 +225,8 @@ public class CategoryAdapter extends RecyclerView.Adapter {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView image, image_thumb;
+        public ImageView image;
+                //image_thumb;
         private TextView text_cat;
         private RelativeLayout lyt_parent;
 
@@ -233,7 +234,7 @@ public class CategoryAdapter extends RecyclerView.Adapter {
             super(itemView);
             image = itemView.findViewById(R.id.image);
             lyt_parent = itemView.findViewById(R.id.rootLayout);
-            image_thumb = itemView.findViewById(R.id.image_thumb);
+           // image_thumb = itemView.findViewById(R.id.image_thumb);
             text_cat = itemView.findViewById(R.id.text_cat);
         }
     }

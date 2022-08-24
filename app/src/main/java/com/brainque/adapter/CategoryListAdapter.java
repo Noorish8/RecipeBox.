@@ -75,7 +75,7 @@ public class CategoryListAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_ITEM) {
-            View view = LayoutInflater.from(activity).inflate(R.layout.row_latest_item, parent, false);
+            View view = LayoutInflater.from(activity).inflate(R.layout.rs_most_view, parent, false);
             return new ViewHolder(view);
         } else if (viewType == VIEW_TYPE_Ad) {
             View view = LayoutInflater.from(activity).inflate(R.layout.admob_adapter, parent, false);

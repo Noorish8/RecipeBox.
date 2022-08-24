@@ -48,7 +48,7 @@ public class MyApplication extends Application {
         ViewPump.init(ViewPump.builder()
                 .addInterceptor(new CalligraphyInterceptor(
                         new CalligraphyConfig.Builder()
-                                .setDefaultFontPath("myfonts/Montserrat-SemiBold.ttf")
+                                .setDefaultFontPath("fonts/Montserrat-SemiBold.ttf")
                                 .setFontAttrId(R.attr.fontPath)
                                 .build()))
                 .build());

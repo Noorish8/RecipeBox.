@@ -4,13 +4,13 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="16"
-6-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\nativetemplates\src\main\AndroidManifest.xml
+6-->E:\cookry_android\nativetemplates\src\main\AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\nativetemplates\src\main\AndroidManifest.xml
+7-->E:\cookry_android\nativetemplates\src\main\AndroidManifest.xml
 8
 9    <application android:supportsRtl="true" >
-9-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\nativetemplates\src\main\AndroidManifest.xml:3:3-5:17
-9-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\nativetemplates\src\main\AndroidManifest.xml:3:16-42
+9-->E:\cookry_android\nativetemplates\src\main\AndroidManifest.xml:3:3-5:17
+9-->E:\cookry_android\nativetemplates\src\main\AndroidManifest.xml:3:16-42
 10    </application>
 11
 12</manifest>

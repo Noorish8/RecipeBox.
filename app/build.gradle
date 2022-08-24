@@ -20,6 +20,9 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'server_url', server_url
     }
+    buildFeatures {
+        viewBinding = true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -76,6 +79,11 @@ dependencies {
         exclude group: "com.google.android.gms", module: "play-services-ads"
     }
 
+
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    
     //implementation "com.tbuonomo:dotsindicator:4.3"
 
 //    implementation "com.google.android.material:material:material_design_version"

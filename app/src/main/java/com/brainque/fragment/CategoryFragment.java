@@ -43,7 +43,7 @@ import java.util.ArrayList;
 public class CategoryFragment extends Fragment {
 
     ArrayList<ItemCategory> mListItem;
-    public RecyclerView recyclerView;
+    public RecyclerView rv_categories;
     CategoryAdapter adapter;
     private ProgressBar progressBar;
     private LinearLayout lyt_not_found;
@@ -60,12 +60,12 @@ public class CategoryFragment extends Fragment {
 
         lyt_not_found = rootView.findViewById(R.id.lyt_not_found);
         progressBar = rootView.findViewById(R.id.progressBar);
-        recyclerView = rootView.findViewById(R.id.vertical_courses_list);
-        recyclerView.setHasFixedSize(true);
+        rv_categories = rootView.findViewById(R.id.rv_categories);
+        rv_categories.setHasFixedSize(true);
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setFocusable(false);
-        recyclerView.setNestedScrollingEnabled(false);
+        rv_categories.setLayoutManager(layoutManager);
+        rv_categories.setFocusable(false);
+        rv_categories.setNestedScrollingEnabled(false);
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -175,7 +175,7 @@ public class CategoryFragment extends Fragment {
     private void displayData() {
         if (getActivity() != null) {
             adapter = new CategoryAdapter(getActivity(), mListItem,onClick);
-            recyclerView.setAdapter(adapter);
+            rv_categories.setAdapter(adapter);
 
             if (adapter.getItemCount() == 0) {
                 lyt_not_found.setVisibility(View.VISIBLE);
@@ -188,11 +188,11 @@ public class CategoryFragment extends Fragment {
     private void showProgress(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.GONE);
+            rv_categories.setVisibility(View.GONE);
             lyt_not_found.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.VISIBLE);
+            rv_categories.setVisibility(View.VISIBLE);
         }
     }
 

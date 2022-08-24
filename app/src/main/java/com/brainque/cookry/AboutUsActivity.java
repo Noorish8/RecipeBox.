@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -24,10 +25,13 @@ import com.brainque.util.JsonUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.squareup.picasso.Picasso;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
+
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import libs.mjn.prettydialog.PrettyDialog;
 import libs.mjn.prettydialog.PrettyDialogCallback;
@@ -37,7 +41,7 @@ public class AboutUsActivity extends AppCompatActivity {
 
     TextView txtAppName, txtVersion, txtCompany, txtEmail, txtWebsite, txtContact;
     TextView imgAppLogo;
-    View     back;
+    View img_back;
     ArrayList<ItemAbout> mListItem;
     ScrollView mScrollView;
     ProgressBar mProgressBar;
@@ -57,7 +61,7 @@ public class AboutUsActivity extends AppCompatActivity {
         JsonUtils.setStatusBarGradiant(AboutUsActivity.this);
 //        toolbar = findViewById(R.id.toolbar);
 //        toolbar.setTitle(getString(R.string.menu_about));
-      //  setSupportActionBar(toolbar);
+        //  setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -74,19 +78,20 @@ public class AboutUsActivity extends AppCompatActivity {
         txtContact = findViewById(R.id.txt_contact);
         imgAppLogo = findViewById(R.id.txt_about);
         webView = findViewById(R.id.webView);
-        back =findViewById(R.id.img_back_arrow);
-      //  back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//               //onBackPressed();
+        img_back = findViewById(R.id.img_back);
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
 //                Intent intent = new Intent(AboutUsActivity.this, SettingFragment.class);
 //                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //                startActivity(intent);
 //                //finish();
-//            }
-     //   });
+            }
+        });
 
-                mScrollView = findViewById(R.id.scrollView);
+        mScrollView = findViewById(R.id.scrollView);
         mProgressBar = findViewById(R.id.progressBar);
 
         mListItem = new ArrayList<>();
@@ -134,7 +139,7 @@ public class AboutUsActivity extends AppCompatActivity {
                     JSONObject objJson;
                     for (int i = 0; i < jsonArray.length(); i++) {
                         objJson = jsonArray.getJSONObject(i);
-                        if(objJson.has("status")){
+                        if (objJson.has("status")) {
                             final PrettyDialog dialog = new PrettyDialog(AboutUsActivity.this);
                             dialog.setTitle(getString(R.string.dialog_error))
                                     .setTitleColor(R.color.dialog_text)
@@ -157,7 +162,7 @@ public class AboutUsActivity extends AppCompatActivity {
                                     });
                             dialog.setCancelable(false);
                             dialog.show();
-                        }else {
+                        } else {
                             ItemAbout itemAbout = new ItemAbout();
                             itemAbout.setAppName(objJson.getString(Constant.APP_NAME));
                             itemAbout.setAppLogo(objJson.getString(Constant.APP_IMAGE));
@@ -188,14 +193,14 @@ public class AboutUsActivity extends AppCompatActivity {
             txtEmail.setText(itemAbout.getAppEmail());
             txtWebsite.setText(itemAbout.getAppWebsite());
             txtContact.setText(itemAbout.getAppContact());
-           // Picasso.get().load(Constant.IMAGE_PATH_URL + itemAbout.getAppLogo()).into(imgAppLogo);
+            // Picasso.get().load(Constant.IMAGE_PATH_URL + itemAbout.getAppLogo()).into(imgAppLogo);
 
             String mimeType = "text/html;charset=UTF-8";
             String encoding = "utf-8";
             String htmlText = itemAbout.getAppDescription();
 
             String text = "<html><head>"
-                    + "<style type=\"text/css\">@font-face {font-family: MyFont;src: url(\"file:///android_asset/fonts/Montserrat-SemiBold.ttf\")}body{font-family: MyFont;color: #8b8b8b;text-align:justify;line-height:1.6}"
+                    + "<style type=\"text/css\">@font-face {font-family: MyFont;src: url(\"file:///android_asset/myfonts/Montserrat-SemiBold.ttf\")}body{font-family: MyFont;color: #8b8b8b;text-align:justify;line-height:1.6}"
                     + "</style></head>"
                     + "<body>"
                     + htmlText
@@ -210,17 +215,17 @@ public class AboutUsActivity extends AppCompatActivity {
         Toast.makeText(AboutUsActivity.this, msg, Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == android.R.id.home) {
-            onBackPressed();
-        } else {
-            return super.onOptionsItemSelected(menuItem);
-        }
-        return true;
-    }
-    public void onBackPressed() {
-        onBackPressed();
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem menuItem) {
+//        if (menuItem.getItemId() == android.R.id.home) {
+//            onBackPressed();
+//        } else {
+//            return super.onOptionsItemSelected(menuItem);
+//        }
+//        return true;
+//    }
 
-    }
+//    public void onBackPressed() {
+//        onBackPressed();
+//    }
 }

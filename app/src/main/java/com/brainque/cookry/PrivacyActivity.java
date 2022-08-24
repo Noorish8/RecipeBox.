@@ -120,7 +120,7 @@ public class PrivacyActivity extends AppCompatActivity {
         String htmlText = htmlPrivacy;
 
         String text = "<html><head>"
-                + "<style type=\"text/css\">@font-face {font-family: MyFont;src: url(\"file:///android_asset/fonts/Montserrat-SemiBold.ttf\")}body{font-family: MyFont;color: #525252;text-align:justify}"
+                + "<style type=\"text/css\">@font-face {font-family: MyFont;src: url(\"file:///android_asset/myfonts/Montserrat-SemiBold.ttf\")}body{font-family: MyFont;color: #525252;text-align:justify}"
                 + "</style></head>"
                 + "<body>"
                 +  htmlText

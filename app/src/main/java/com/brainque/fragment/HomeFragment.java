@@ -93,9 +93,11 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setRetainInstance(true);
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         GlobalBus.getBus().register(this);
         myApplication = MyApplication.getAppInstance();
+
 
         mScrollView = rootView.findViewById(R.id.scrollView);
         mProgressBar = rootView.findViewById(R.id.progressBar);

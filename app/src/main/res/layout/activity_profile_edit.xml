@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_abt">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,31 +12,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-    <View
-        android:id="@+id/img_back_arrow"
-        android:layout_width="21dp"
-        android:layout_height="11dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="37dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/ic_back_arround"/>
-    <TextView
-        android:id="@+id/txt_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile"
-        android:textAlignment="center"
-        android:textColor="@color/dark_black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/card_profile"
-        app:layout_constraintTop_toTopOf="@+id/img_back_arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/img_back_arrow"
-        app:layout_constraintEnd_toEndOf="@+id/card_profile"/>
+            <View
+                android:id="@+id/img_back"
+                android:layout_width="21dp"
+                android:layout_height="11dp"
+                android:onClick="img_back"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ic_back_arround" />
+
+            <TextView
+                android:id="@+id/txt_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile"
+                android:textAlignment="center"
+                android:textColor="@color/dark_black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_back_arrow"
+                app:layout_constraintEnd_toEndOf="@+id/card_profile"
+                app:layout_constraintStart_toStartOf="@+id/card_profile"
+                app:layout_constraintTop_toTopOf="@+id/img_back_arrow" />
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/card_profile"
                 android:layout_width="100dp"
@@ -45,355 +50,361 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="@drawable/profile_img"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent_image"
-                app:layout_constraintTop_toBottomOf="@+id/txt_profile"/>
+                app:layout_constraintTop_toBottomOf="@+id/txt_profile" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_camera_img"
                 app:layout_constraintBottom_toBottomOf="@+id/card_profile"
-                app:layout_constraintEnd_toEndOf="@+id/card_profile"/>
+                app:layout_constraintEnd_toEndOf="@+id/card_profile" />
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/card_profile"-->
-<!--        android:layout_width="105dp"-->
-<!--        android:layout_height="105dp"-->
-<!--        app:cardCornerRadius="250dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txt_profile"-->
-<!--        app:cardBackgroundColor="@color/light_green">-->
+            <!--    <androidx.cardview.widget.CardView-->
+            <!--        android:id="@+id/card_profile"-->
+            <!--        android:layout_width="105dp"-->
+            <!--        android:layout_height="105dp"-->
+            <!--        app:cardCornerRadius="250dp"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        android:layout_marginTop="40dp"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/txt_profile"-->
+            <!--        app:cardBackgroundColor="@color/light_green">-->
 
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            app:cardCornerRadius="200dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            app:cardBackgroundColor="@color/white">-->
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:layout_width="100dp"-->
+            <!--            android:layout_height="100dp"-->
+            <!--            app:cardCornerRadius="200dp"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            app:cardBackgroundColor="@color/white">-->
 
-<!--            <ImageView-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:src="@drawable/profile_img"-->
-<!--                />-->
+            <!--            <ImageView-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:layout_height="100dp"-->
+            <!--                android:src="@drawable/profile_img"-->
+            <!--                />-->
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/ic_camera_img"-->
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/ic_camera_img"-->
 
-<!--        </androidx.cardview.widget.CardView>-->
+            <!--        </androidx.cardview.widget.CardView>-->
 
- <!--  // </androidx.cardview.widget.CardView>-->
-    <TextView
-        android:id="@+id/txt_profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your Name"
-        app:layout_constraintStart_toStartOf="@+id/card_profile"
-        app:layout_constraintTop_toBottomOf="@+id/card_profile"
-        app:layout_constraintEnd_toEndOf="@+id/card_profile"
-        android:textSize="20dp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/dark_black"/>
-    <TextView
-        android:id="@+id/txt_pro_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your name"
-        android:textSize="12dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/dark_black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_profile_name"/>
-    <EditText
-        android:id="@+id/edt_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_edittext_bg"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pro_name"
-        app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="22dp"
-        android:drawableEnd="@drawable/ic_edit"
-        android:layout_marginTop="11dp"
-        android:paddingEnd="12dp"
-        android:paddingStart="12dp"
-        android:hint="@string/name_login"
-        android:drawablePadding="10dp"
-        android:paddingVertical="15dp"/>
-    <TextView
-        android:id="@+id/txt_pro_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your email"
-        android:textSize="12dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/dark_black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_name"/>
-    <EditText
-        android:id="@+id/edt_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_edittext_bg"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pro_email"
-        app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="22dp"
-        android:drawableEnd="@drawable/ic_edit"
-        android:layout_marginTop="11dp"
-        android:paddingEnd="12dp"
-        android:paddingStart="12dp"
-        android:hint="@string/email_login"
-        android:drawablePadding="10dp"
-        android:paddingVertical="15dp"/>
-    <TextView
-        android:id="@+id/edit_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your password"
-        android:textSize="12dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/dark_black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_email"/>
-    <EditText
-        android:id="@+id/edt_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_edittext_bg"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="22dp"
-        android:drawableEnd="@drawable/ic_edit"
-        android:layout_marginTop="11dp"
-        android:paddingEnd="12dp"
-        android:paddingStart="12dp"
-        android:hint="@string/password_login"
-        android:drawablePadding="10dp"
-        android:paddingVertical="15dp"/>
+            <!--  // </androidx.cardview.widget.CardView>-->
+            <TextView
+                android:id="@+id/txt_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                app:layout_constraintStart_toStartOf="@+id/card_profile"
+                app:layout_constraintTop_toBottomOf="@+id/card_profile"
+                app:layout_constraintEnd_toEndOf="@+id/card_profile"
+                android:textSize="20dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/dark_black" />
 
-    <TextView
-        android:id="@+id/txt_pro_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mobile number"
-        android:textSize="12dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/dark_black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password"/>
-    <EditText
-        android:id="@+id/edt_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_edittext_bg"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pro_number"
-        app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="22dp"
-        android:drawableEnd="@drawable/ic_edit"
-        android:layout_marginTop="11dp"
-        android:paddingEnd="12dp"
-        android:paddingStart="12dp"
-        android:hint="@string/phone_login"
-        android:drawablePadding="10dp"
-        android:paddingVertical="15dp"/>
+            <TextView
+                android:id="@+id/txt_pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your name"
+                android:textSize="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/dark_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_profile_name" />
 
-        <Button
-            android:id="@+id/button_update"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/ic_rectangle_login"
-            android:text="@string/login"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="24dp"
-          app:layout_constraintBottom_toBottomOf="parent"/>
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_bg"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pro_name"
+                app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="22dp"
+                android:drawableEnd="@drawable/ic_edit"
+                android:layout_marginTop="11dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:hint="@string/name_login"
+                android:drawablePadding="10dp"
+                android:paddingVertical="15dp" />
+
+            <TextView
+                android:id="@+id/txt_pro_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your email"
+                android:textSize="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/dark_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_bg"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pro_email"
+                app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="22dp"
+                android:drawableEnd="@drawable/ic_edit"
+                android:layout_marginTop="11dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:hint="@string/email_login"
+                android:drawablePadding="10dp"
+                android:paddingVertical="15dp" />
+
+            <TextView
+                android:id="@+id/edit_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your password"
+                android:textSize="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/dark_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_bg"
+                app:layout_constraintTop_toBottomOf="@+id/edit_pass"
+                app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="22dp"
+                android:drawableEnd="@drawable/ic_edit"
+                android:layout_marginTop="11dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:hint="@string/password_login"
+                android:drawablePadding="10dp"
+                android:paddingVertical="15dp" />
+
+            <TextView
+                android:id="@+id/txt_pro_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile number"
+                android:textSize="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/dark_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edittext_bg"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pro_number"
+                app:layout_constraintStart_toStartOf="@+id/txt_pro_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="22dp"
+                android:drawableEnd="@drawable/ic_edit"
+                android:layout_marginTop="11dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:hint="@string/phone_login"
+                android:drawablePadding="10dp"
+                android:paddingVertical="15dp" />
+
+            <Button
+                android:id="@+id/button_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/ic_rectangle_login"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
 
+    <!--    <include-->
+    <!--        android:id="@+id/toolbar_main"-->
+    <!--        layout="@layout/row_toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true" />-->
 
-<!--    <include-->
-<!--        android:id="@+id/toolbar_main"-->
-<!--        layout="@layout/row_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentTop="true" />-->
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/card_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@+id/toolbar_main"-->
+    <!--        android:layout_margin="5dp"-->
+    <!--        card_view:cardBackgroundColor="@color/white"-->
+    <!--        card_view:cardCornerRadius="2dp"-->
+    <!--        card_view:cardUseCompatPadding="false"-->
+    <!--        card_view:elevation="5dp">-->
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/card_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_below="@+id/toolbar_main"-->
-<!--        android:layout_margin="5dp"-->
-<!--        card_view:cardBackgroundColor="@color/white"-->
-<!--        card_view:cardCornerRadius="2dp"-->
-<!--        card_view:cardUseCompatPadding="false"-->
-<!--        card_view:elevation="5dp">-->
+    <!--        <ScrollView-->
+    <!--            android:id="@+id/scrollView"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
 
-<!--        <ScrollView-->
-<!--            android:id="@+id/scrollView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/content"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:padding="15dp">-->
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/content"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical"-->
-<!--                android:padding="15dp">-->
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:layout_marginBottom="8dp"-->
+    <!--                    android:layout_marginTop="25dp"-->
+    <!--                    android:background="@color/line_color" />-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="1dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:layout_marginTop="25dp"-->
-<!--                    android:background="@color/line_color" />-->
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="3dp"-->
+    <!--                    android:text="@string/name_login"-->
+    <!--                    android:textColor="@color/gray"-->
+    <!--                    android:textSize="14sp"-->
+    <!--                    android:textStyle="bold" />-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="3dp"-->
-<!--                    android:text="@string/name_login"-->
-<!--                    android:textColor="@color/gray"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textStyle="bold" />-->
+    <!--                <EditText-->
+    <!--                    android:id="@+id/edt_name"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="3dp"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:background="@android:color/transparent"-->
+    <!--                    android:hint="@string/name_login"-->
+    <!--                    android:inputType="textPersonName"-->
+    <!--                    android:textColor="@color/profile_text"-->
+    <!--                    android:textColorHint="@color/profile_text"-->
+    <!--                    android:textSize="14sp" />-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_name"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginBottom="3dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:hint="@string/name_login"-->
-<!--                    android:inputType="textPersonName"-->
-<!--                    android:textColor="@color/profile_text"-->
-<!--                    android:textColorHint="@color/profile_text"-->
-<!--                    android:textSize="14sp" />-->
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:layout_marginBottom="8dp"-->
+    <!--                    android:layout_marginTop="8dp"-->
+    <!--                    android:background="@color/line_color" />-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="1dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:background="@color/line_color" />-->
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="3dp"-->
+    <!--                    android:text="@string/email_login"-->
+    <!--                    android:textColor="@color/gray"-->
+    <!--                    android:textSize="14sp"-->
+    <!--                    android:textStyle="bold" />-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="3dp"-->
-<!--                    android:text="@string/email_login"-->
-<!--                    android:textColor="@color/gray"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textStyle="bold" />-->
+    <!--                <EditText-->
+    <!--                    android:id="@+id/edt_email"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="3dp"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:background="@android:color/transparent"-->
+    <!--                    android:hint="@string/email_login"-->
+    <!--                    android:inputType="textEmailAddress"-->
+    <!--                    android:textColor="@color/profile_text"-->
+    <!--                    android:textColorHint="@color/profile_text"-->
+    <!--                    android:textSize="14sp" />-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_email"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginBottom="3dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:hint="@string/email_login"-->
-<!--                    android:inputType="textEmailAddress"-->
-<!--                    android:textColor="@color/profile_text"-->
-<!--                    android:textColorHint="@color/profile_text"-->
-<!--                    android:textSize="14sp" />-->
+    <!--                <View-->
+    <!--                    android:id="@+id/view_1"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:layout_marginBottom="8dp"-->
+    <!--                    android:layout_marginTop="8dp"-->
+    <!--                    android:background="@color/line_color" />-->
 
-<!--                <View-->
-<!--                    android:id="@+id/view_1"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="1dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:background="@color/line_color" />-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/edit_pass"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="3dp"-->
+    <!--                    android:text="@string/password_login"-->
+    <!--                    android:textColor="@color/gray"-->
+    <!--                    android:textSize="14sp"-->
+    <!--                    android:textStyle="bold" />-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/edit_pass"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="3dp"-->
-<!--                    android:text="@string/password_login"-->
-<!--                    android:textColor="@color/gray"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textStyle="bold" />-->
+    <!--                <EditText-->
+    <!--                    android:id="@+id/edt_password"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="3dp"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:background="@android:color/transparent"-->
+    <!--                    android:hint="@string/password_login"-->
+    <!--                    android:inputType="textPassword"-->
+    <!--                    android:textColor="@color/profile_text"-->
+    <!--                    android:textColorHint="@color/profile_text"-->
+    <!--                    android:textSize="14sp" />-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_password"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginBottom="3dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:hint="@string/password_login"-->
-<!--                    android:inputType="textPassword"-->
-<!--                    android:textColor="@color/profile_text"-->
-<!--                    android:textColorHint="@color/profile_text"-->
-<!--                    android:textSize="14sp" />-->
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:layout_marginBottom="8dp"-->
+    <!--                    android:layout_marginTop="8dp"-->
+    <!--                    android:background="@color/line_color" />-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="1dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:background="@color/line_color" />-->
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="3dp"-->
+    <!--                    android:text="@string/phone_login"-->
+    <!--                    android:textColor="@color/gray"-->
+    <!--                    android:textSize="14sp"-->
+    <!--                    android:textStyle="bold" />-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="3dp"-->
-<!--                    android:text="@string/phone_login"-->
-<!--                    android:textColor="@color/gray"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textStyle="bold" />-->
+    <!--                <EditText-->
+    <!--                    android:id="@+id/edt_phone"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="3dp"-->
+    <!--                    android:layout_marginTop="5dp"-->
+    <!--                    android:background="@android:color/transparent"-->
+    <!--                    android:hint="@string/phone_login"-->
+    <!--                    android:inputType="phone"-->
+    <!--                    android:textColor="@color/profile_text"-->
+    <!--                    android:textColorHint="@color/profile_text"-->
+    <!--                    android:textSize="14sp" />-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_phone"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginBottom="3dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:hint="@string/phone_login"-->
-<!--                    android:inputType="phone"-->
-<!--                    android:textColor="@color/profile_text"-->
-<!--                    android:textColorHint="@color/profile_text"-->
-<!--                    android:textSize="14sp" />-->
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:layout_marginBottom="8dp"-->
+    <!--                    android:layout_marginTop="8dp"-->
+    <!--                    android:background="@color/line_color" />-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="1dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:background="@color/line_color" />-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/button_update"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="35dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginTop="15dp"-->
+    <!--                    android:background="@drawable/button_login_background"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="@string/submit"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textSize="14sp" />-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
 
-<!--                <Button-->
-<!--                    android:id="@+id/button_update"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="35dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_marginTop="15dp"-->
-<!--                    android:background="@drawable/button_login_background"-->
-<!--                    android:gravity="center"-->
-<!--                    android:text="@string/submit"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="14sp" />-->
-<!--            </LinearLayout>-->
-<!--        </ScrollView>-->
-
-<!--    </androidx.cardview.widget.CardView>-->
+    <!--    </androidx.cardview.widget.CardView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

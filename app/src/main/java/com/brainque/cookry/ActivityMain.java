@@ -16,6 +16,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -33,11 +34,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.brainque.fragment.CategoryFragment;
-import com.brainque.fragment.FavoriteFragment;
+import com.brainque.cookry.databinding.ActivityMainBinding;
+import com.brainque.fragment.FavouriteFragment;
 import com.brainque.fragment.HomeFragment;
-import com.brainque.fragment.LatestFragment;
-import com.brainque.fragment.MostViewFragment;
 import com.brainque.fragment.SettingFragment;
 import com.brainque.item.ItemAbout;
 import com.brainque.util.API;
@@ -69,7 +68,7 @@ import libs.mjn.prettydialog.PrettyDialogCallback;
 public class ActivityMain extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
-    NavigationView navigationView;
+    //   NavigationView navigationView;
     Toolbar toolbar;
     private FragmentManager fragmentManager;
     ArrayList<ItemAbout> mListItem;
@@ -80,21 +79,48 @@ public class ActivityMain extends AppCompatActivity {
     private LinearLayout lyt_not_found;
     TextView header_tag;
     int versionCode;
+    LinearLayout logout, profile;
+
+    ImageView dot_fav, dot_home, dot_user, dot_setting, img_home, img_setting, img_favourite, img_user;
+
 
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
+    ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         MyApp = MyApplication.getAppInstance();
         JsonUtils.setStatusBarGradiant(ActivityMain.this);
         versionCode = BuildConfig.VERSION_CODE;
+
+
+        dot_home = binding.drawerLayout.findViewById(R.id.img_dot_home);
+        img_home = binding.drawerLayout.findViewById(R.id.img_home);
+
+        dot_fav = binding.drawerLayout.findViewById(R.id.img_dot_favourite);
+        img_favourite = binding.drawerLayout.findViewById(R.id.img_favourite);
+
+        dot_setting = binding.drawerLayout.findViewById(R.id.img_dot_setting);
+        img_setting = binding.drawerLayout.findViewById(R.id.img_setting);
+
+        img_user = binding.drawerLayout.findViewById(R.id.img_user);
+        dot_user = binding.drawerLayout.findViewById(R.id.img_dot_user);
+
+
+        visible_gone();
+
+        dot_home.setVisibility(View.VISIBLE);
+        img_home.setColorFilter(getResources().getColor(R.color.light_green));
 
         toolbar.post(new Runnable() {
             @Override
@@ -107,9 +133,163 @@ public class ActivityMain extends AppCompatActivity {
         jsonUtils.forceRTLIfSupported(getWindow());
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        View hView = navigationView.inflateHeaderView(R.layout.nav_header);
-        header_tag = hView.findViewById(R.id.header_tag);
+
+
+        //    navigationView = findViewById(R.id.nav_view);
+
+        //   View headerView = binding.navigationView.getHeaderView(0);
+        //home_latter = (ImageView) headerView.findViewById(R.id.home_latter);
+        //   View hView = navigationView.inflateHeaderView(R.layout.nav_header);
+        //   View hView = navigationView.inflateHeaderView(R.layout.side_bar);
+        // header_tag = hView.findViewById(R.id.header_tag);
+
+        binding.drawerLayout.findViewById(R.id.ll_bottom_profile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profile_screen();
+            }
+        });
+
+        binding.drawerLayout.findViewById(R.id.ll_setting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SettingFragment settingFragment = new SettingFragment();
+                loadFrag(settingFragment, getString(R.string.menu_setting), fragmentManager);
+                mDrawerLayout.closeDrawers();
+
+                visible_gone();
+                dot_setting.setVisibility(View.VISIBLE);
+                img_setting.setColorFilter(getResources().getColor(R.color.light_green));
+            }
+        });
+
+        binding.drawerLayout.findViewById(R.id.ll_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeFragment homeFragment = new HomeFragment();
+                loadFrag(homeFragment, getString(R.string.menu_home), fragmentManager);
+                mDrawerLayout.closeDrawers();
+
+                visible_gone();
+                dot_home.setVisibility(View.VISIBLE);
+                img_home.setColorFilter(getResources().getColor(R.color.light_green));
+
+            }
+        });
+
+        binding.drawerLayout.findViewById(R.id.ll_favourite).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FavouriteFragment favoriteFragment = new FavouriteFragment();
+                loadFrag(favoriteFragment, getString(R.string.menu_favorite), fragmentManager);
+                mDrawerLayout.closeDrawers();
+
+                visible_gone();
+                dot_fav.setVisibility(View.VISIBLE);
+                img_favourite.setColorFilter(getResources().getColor(R.color.light_green));
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeFragment homeFragment = new HomeFragment();
+                loadFrag(homeFragment, getString(R.string.menu_home), fragmentManager);
+                mDrawerLayout.closeDrawers();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_latest).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), CommonActivity.class).putExtra("fragment_name", "latest");
+                startActivity(intent2);
+                mDrawerLayout.closeDrawers();
+
+            }
+        });
+        binding.navigationView.findViewById(R.id.ll_categories).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), CommonActivity.class).putExtra("fragment_name", "categories");
+                startActivity(intent2);
+//                MostViewFragment mostViewFragment = new MostViewFragment();
+//                loadFrag(mostViewFragment, getString(R.string.menu_most), fragmentManager);
+                mDrawerLayout.closeDrawers();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_most_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), CommonActivity.class).putExtra("fragment_name", "most_view");
+                startActivity(intent2);
+//                MostViewFragment mostViewFragment = new MostViewFragment();
+//                loadFrag(mostViewFragment, getString(R.string.menu_most), fragmentManager);
+                mDrawerLayout.closeDrawers();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_saved).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FavouriteFragment favoriteFragment = new FavouriteFragment();
+                loadFrag(favoriteFragment, getString(R.string.menu_favorite), fragmentManager);
+                mDrawerLayout.closeDrawers();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_profile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profile_screen();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.img_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawerLayout.closeDrawers();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        binding.navigationView.findViewById(R.id.ll_logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (MyApp.getUserType()) {
+                    case "Normal":
+                        Logout();
+                        break;
+                    case "Google":
+                        logoutG();
+                        break;
+                    case "Facebook":
+                        LoginManager.getInstance().logOut();
+                        MyApp.saveIsLogin(false);
+                        MyApp.setUserId("");
+                        Intent intent2 = new Intent(getApplicationContext(), SignInActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent2);
+                        finish();
+                        break;
+                }
+
+            }
+        });
+
+
+        binding.drawerLayout.findViewById(R.id.bottom_navigation_bar);
+
         adLayout = findViewById(R.id.adview);
         lyt_not_found = findViewById(R.id.lyt_not_found);
         progressBar = findViewById(R.id.progressBar);
@@ -150,8 +330,8 @@ public class ActivityMain extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        if (navigationView != null) {
-            setupDrawerContent(navigationView);
+        if (binding.navigationView != null) {
+            setupDrawerContent(binding.navigationView);
         }
         fragmentManager = getSupportFragmentManager();
 
@@ -164,7 +344,7 @@ public class ActivityMain extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         int id = menuItem.getItemId();
                         switch (id) {
-                            case R.id.nav_home:
+                            /*case R.id.nav_home:
                                 HomeFragment homeFragment = new HomeFragment();
                                 loadFrag(homeFragment, getString(R.string.menu_home), fragmentManager);
                                 mDrawerLayout.closeDrawers();
@@ -188,19 +368,20 @@ public class ActivityMain extends AppCompatActivity {
                                 FavoriteFragment favoriteFragment = new FavoriteFragment();
                                 loadFrag(favoriteFragment, getString(R.string.menu_favorite), fragmentManager);
                                 mDrawerLayout.closeDrawers();
-                                break;
+                                break;*/
 
                             case R.id.nav_setting:
                                 SettingFragment settingFragment = new SettingFragment();
                                 loadFrag(settingFragment, getString(R.string.menu_setting), fragmentManager);
                                 mDrawerLayout.closeDrawers();
                                 break;
-                            case R.id.menu_go_login:
+                           /* case R.id.menu_go_login:
                                 Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                                 finish();
                                 return true;
+
                             case R.id.menu_go_logout:
                                 switch (MyApp.getUserType()) {
                                     case "Normal":
@@ -220,7 +401,7 @@ public class ActivityMain extends AppCompatActivity {
                                         break;
                                 }
                                 mDrawerLayout.closeDrawers();
-                                return true;
+                                return true;*/
                         }
                         return true;
                     }
@@ -230,7 +411,7 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     public void highLightNavigation(int position) {
-        navigationView.getMenu().getItem(position).setChecked(true);
+        binding.navigationView.getMenu().getItem(position).setChecked(true);
     }
 
     public void loadFrag(Fragment f1, String name, FragmentManager fm) {
@@ -332,7 +513,7 @@ public class ActivityMain extends AppCompatActivity {
             Constant.SAVE_ADS_PUB_ID = itemAbout.getappFullPub();
             Constant.SAVE_ADS_CLICK = itemAbout.getappFullAdsClick();
             Constant.SAVE_TAG_LINE = itemAbout.getAppTagLine();
-            header_tag.setText(Constant.SAVE_TAG_LINE);
+            //       header_tag.setText(Constant.SAVE_TAG_LINE);
             Constant.SAVE_ADS_NATIVE_ON_OFF = itemAbout.getAppNativeOnOff();
             Constant.SAVE_NATIVE_ID = itemAbout.getAppNativeId();
             Constant.SAVE_BANNER_TYPE = itemAbout.getAppBannerType();
@@ -502,14 +683,75 @@ public class ActivityMain extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (MyApp.getIsLogin()) {
-            navigationView.getMenu().findItem(R.id.menu_go_login).setVisible(false);
-            navigationView.getMenu().findItem(R.id.menu_go_logout).setVisible(true);
+
+            binding.navigationView.findViewById(R.id.ll_logout).setVisibility(View.VISIBLE);
+            binding.navigationView.findViewById(R.id.ll_login).setVisibility(View.GONE);
+
+            //         navigationView.getMenu().findItem(R.id.menu_go_login).setVisible(false);
+            //         navigationView.getMenu().findItem(R.id.menu_go_logout).setVisible(true);
         } else {
-            navigationView.getMenu().findItem(R.id.menu_go_login).setVisible(true);
-            navigationView.getMenu().findItem(R.id.menu_go_logout).setVisible(false);
+            binding.navigationView.findViewById(R.id.ll_logout).setVisibility(View.GONE);
+            binding.navigationView.findViewById(R.id.ll_login).setVisibility(View.VISIBLE);
+            //     navigationView.getMenu().findItem(R.id.menu_go_login).setVisible(true);
+            //       navigationView.getMenu().findItem(R.id.menu_go_logout).setVisible(false);
         }
     }
 
 
+    private void profile_screen() {
+        mDrawerLayout.closeDrawers();
+        if (MyApp.getIsLogin()) {
+            Intent intent_edit = new Intent(ActivityMain.this, ProfileEditActivity.class);
+            startActivity(intent_edit);
 
+            visible_gone();
+            dot_user.setVisibility(View.VISIBLE);
+            img_user.setColorFilter(getResources().getColor(R.color.light_green));
+
+        } else {
+            final PrettyDialog dialog = new PrettyDialog(ActivityMain.this);
+            dialog.setTitle(getString(R.string.dialog_warning))
+                    .setTitleColor(R.color.dialog_text)
+                    .setMessage(getString(R.string.login_require))
+                    .setMessageColor(R.color.dialog_text)
+                    .setAnimationEnabled(false)
+                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                        @Override
+                        public void onClick() {
+                            dialog.dismiss();
+                        }
+                    })
+                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                        @Override
+                        public void onClick() {
+                            dialog.dismiss();
+                            Intent intent_login = new Intent(ActivityMain.this, SignInActivity.class);
+                            intent_login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent_login);
+                        }
+                    })
+                    .addButton(getString(R.string.dialog_no), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                        @Override
+                        public void onClick() {
+                            dialog.dismiss();
+                        }
+                    });
+            dialog.setCancelable(false);
+            dialog.show();
+        }
+    }
+
+
+    private void visible_gone() {
+        dot_fav.setVisibility(View.GONE);
+        dot_home.setVisibility(View.GONE);
+        dot_user.setVisibility(View.GONE);
+        dot_setting.setVisibility(View.GONE);
+
+        img_home.setColorFilter(getResources().getColor(R.color.dark_bottom_color));
+        img_favourite.setColorFilter(getResources().getColor(R.color.dark_bottom_color));
+
+        img_setting.setColorFilter(getResources().getColor(R.color.dark_bottom_color));
+        img_user.setColorFilter(getResources().getColor(R.color.dark_bottom_color));
+    }
 }

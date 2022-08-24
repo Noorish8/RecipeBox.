@@ -41,7 +41,7 @@ import java.util.ArrayList;
 public class LatestFragment extends Fragment {
 
     ArrayList<ItemLatest> mListItem;
-    public RecyclerView recyclerView;
+    public RecyclerView rv_latest;
     LatestAdapter adapter;
     private ProgressBar progressBar;
     private LinearLayout lyt_not_found;
@@ -51,18 +51,18 @@ public class LatestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_category, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_latest, container, false);
         GlobalBus.getBus().register(this);
         myApplication = MyApplication.getAppInstance();
         mListItem = new ArrayList<>();
 
         lyt_not_found = rootView.findViewById(R.id.lyt_not_found);
         progressBar = rootView.findViewById(R.id.progressBar);
-        recyclerView = rootView.findViewById(R.id.vertical_courses_list);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        recyclerView.setFocusable(false);
-        recyclerView.setNestedScrollingEnabled(false);
+        rv_latest = rootView.findViewById(R.id.rv_latest);
+        rv_latest.setHasFixedSize(true);
+        rv_latest.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        rv_latest.setFocusable(false);
+        rv_latest.setNestedScrollingEnabled(false);
 
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
         jsObj.addProperty("method_name", "get_latest");
@@ -146,7 +146,7 @@ public class LatestFragment extends Fragment {
     private void displayData() {
         if (getActivity() != null) {
             adapter = new LatestAdapter(getActivity(), mListItem);
-            recyclerView.setAdapter(adapter);
+            rv_latest.setAdapter(adapter);
 
             if (adapter.getItemCount() == 0) {
                 lyt_not_found.setVisibility(View.VISIBLE);
@@ -159,11 +159,11 @@ public class LatestFragment extends Fragment {
     private void showProgress(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.GONE);
+            rv_latest.setVisibility(View.GONE);
             lyt_not_found.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.VISIBLE);
+            rv_latest.setVisibility(View.VISIBLE);
         }
     }
 

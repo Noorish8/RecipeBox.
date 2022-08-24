@@ -62,7 +62,7 @@ public class LatestAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_ITEM) {
-            View view = LayoutInflater.from(activity).inflate(R.layout.row_latest_item, parent, false);
+            View view = LayoutInflater.from(activity).inflate(R.layout.rs_latest, parent, false);
             return new ViewHolder(view);
         } else if (viewType == VIEW_TYPE_Ad) {
             View view = LayoutInflater.from(activity).inflate(R.layout.admob_adapter, parent, false);
@@ -78,11 +78,12 @@ public class LatestAdapter extends RecyclerView.Adapter {
 
             final ViewHolder viewHolder = (ViewHolder) holder;
             final ItemLatest singleItem = dataList.get(position);
+
             Picasso.get().load(singleItem.getRecipeImageBig()).placeholder(R.drawable.place_holder_big).into(viewHolder.image);
             viewHolder.txt_time.setText(singleItem.getRecipeTime());
             viewHolder.txt_recipe.setText(singleItem.getRecipeName());
             viewHolder.txt_view.setText(JsonUtils.Format(Integer.parseInt(singleItem.getRecipeViews())));
-            viewHolder.ratingView.setRating(Float.parseFloat(singleItem.getRecipeAvgRate()));
+        //    viewHolder.txt_rating.setText(Float.parseFloat(singleItem.getRecipeAvgRate()));
 
             viewHolder.image.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -267,19 +268,19 @@ public class LatestAdapter extends RecyclerView.Adapter {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView image, image_fav;
-        private TextView txt_recipe, txt_view, txt_time;
+        private TextView txt_recipe, txt_view, txt_time,txt_rating;
         private LinearLayout lyt_parent;
-        private RatingView ratingView;
+      //  private RatingView ratingView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image_recipe);
             image_fav = itemView.findViewById(R.id.img_fav_list);
             //lyt_parent = itemView.findViewById(R.id.rootLayout);//click
-            txt_recipe = itemView.findViewById(R.id.text_recipe_name);
-            txt_view = itemView.findViewById(R.id.text_view);
+            txt_recipe = itemView.findViewById(R.id.txt_recipe_name);
+            txt_view = itemView.findViewById(R.id.txt_views);
             txt_time = itemView.findViewById(R.id.text_time);
-            ratingView = itemView.findViewById(R.id.ratingView);
+            txt_rating = itemView.findViewById(R.id.txt_rating);
         }
     }
 

@@ -75,6 +75,46 @@
         <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/home_bottom_menu.xml" value="0.271875" />
         <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/menu_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Capermint Projects/Recipe Box Package V2.4/Source Code/AndroidCode/RecipesBox_V2.4/app/src/main/res/menu/menu_profile.xml" value="0.27291666666666664" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/bg_blackgradient.xml" value="0.1845" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/black_cat_background.xml" value="0.1845" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/custom_bg.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/custom_bg_rate.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_close.xml" value="0.121" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_heart.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_home_home.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_logout.xml" value="0.121" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_logout1.xml" value="0.121" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_profile.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_profile_name.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_saved.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_setting_home.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_timer.xml" value="0.2775" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/ic_view.xml" value="0.2775" />
+        <entry key="..\:/cookry_android/app/src/main/res/drawable/lineae_yellow_bg.xml" value="0.202" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_about_us.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_common.xml" value="0.25" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_detail.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_profile_edit.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/activity_welcome.xml" value="0.27291666666666664" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/bottom_bar.xml" value="0.2231722958529286" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/fragment_category.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/fragment_home.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/fragment_latest.xml" value="0.2231722958529286" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/fragment_most_view.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/fragment_setting.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/nav_header.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/row_all_review_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/row_cat_item.xml" value="0.2" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/row_latest_item.xml" value="0.25" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/row_toolbar.xml" value="0.27291666666666664" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/rs_latest.xml" value="0.5879218472468917" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/rs_most_view.xml" value="0.75" />
+        <entry key="..\:/cookry_android/app/src/main/res/layout/side_bar.xml" value="0.2" />
+        <entry key="..\:/cookry_android/app/src/main/res/menu/drawer_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/cookry_android/app/src/main/res/menu/home_bottom_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

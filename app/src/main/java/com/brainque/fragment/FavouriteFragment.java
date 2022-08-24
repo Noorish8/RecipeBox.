@@ -42,10 +42,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class FavoriteFragment extends Fragment {
+public class FavouriteFragment extends Fragment {
 
     ArrayList<ItemLatest> mListItem;
-    public RecyclerView recyclerView;
+    public RecyclerView rv_most_view;
     LatestAdapter favoriteAdapter;
     private LinearLayout lyt_not_found;
     TextView no_fav;
@@ -56,18 +56,18 @@ public class FavoriteFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_category, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_most_view, container, false);
         GlobalBus.getBus().register(this);
         myApplication = MyApplication.getAppInstance();
         mListItem = new ArrayList<>();
         lyt_not_found = rootView.findViewById(R.id.lyt_not_found);
-        recyclerView = rootView.findViewById(R.id.vertical_courses_list);
+        rv_most_view = rootView.findViewById(R.id.rv_most_view);
         no_fav = rootView.findViewById(R.id.no_fav);
         progressBar = rootView.findViewById(R.id.progressBar);
-        recyclerView.setHasFixedSize(true);
+        rv_most_view.setHasFixedSize(true);
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 1);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setFocusable(false);
+        rv_most_view.setLayoutManager(layoutManager);
+        rv_most_view.setFocusable(false);
 
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
         jsObj.addProperty("method_name", "get_favourite_list");
@@ -152,7 +152,7 @@ public class FavoriteFragment extends Fragment {
     private void displayData() {
         if (getActivity() != null) {
             favoriteAdapter = new LatestAdapter(getActivity(), mListItem);
-            recyclerView.setAdapter(favoriteAdapter);
+            rv_most_view.setAdapter(favoriteAdapter);
 
             if (favoriteAdapter.getItemCount() == 0) {
                 lyt_not_found.setVisibility(View.VISIBLE);
@@ -166,11 +166,11 @@ public class FavoriteFragment extends Fragment {
     private void showProgress(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.GONE);
+            rv_most_view.setVisibility(View.GONE);
             lyt_not_found.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.VISIBLE);
+            rv_most_view.setVisibility(View.VISIBLE);
         }
     }
 
