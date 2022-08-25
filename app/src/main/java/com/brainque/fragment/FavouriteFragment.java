@@ -58,6 +58,7 @@ public class FavouriteFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_most_view, container, false);
         GlobalBus.getBus().register(this);
+
         myApplication = MyApplication.getAppInstance();
         mListItem = new ArrayList<>();
         lyt_not_found = rootView.findViewById(R.id.lyt_not_found);
