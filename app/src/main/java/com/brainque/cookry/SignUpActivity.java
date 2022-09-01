@@ -241,13 +241,13 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
                     .setMessage(strMessage)
                     .setMessageColor(R.color.dialog_text)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_logout_d, R.color.white, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
@@ -262,13 +262,13 @@ public class SignUpActivity extends AppCompatActivity implements Validator.Valid
                     .setMessage(strMessage)
                     .setMessageColor(R.color.dialog_text)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_success, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_success_icon, R.color.white, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();

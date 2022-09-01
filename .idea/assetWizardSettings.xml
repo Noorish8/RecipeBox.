@@ -328,8 +328,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_right" />
-                            <entry key="sourceFile" value="C:\Users\Chirag\Downloads\ic_dot.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_ing_dot" />
+                            <entry key="sourceFile" value="C:\ing_dot.svg" />
                           </map>
                         </option>
                       </PersistentState>

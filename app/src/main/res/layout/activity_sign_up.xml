@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:backgroundTint="@color/dark_green">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/welcome_back"
                 android:textColor="@color/dark_green"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/txt_sign_up_continue"
                 app:layout_constraintStart_toStartOf="@+id/editText_password_register" />
 
@@ -53,8 +52,7 @@
                 android:id="@+id/txt_sign_up_continue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create your account"
-
+                android:text="@string/create_your_account"
                 android:textColor="@color/dark_green"
                 android:layout_marginBottom="30dp"
                 app:layout_constraintStart_toStartOf="@+id/editText_password_register"
@@ -63,7 +61,7 @@
                 android:id="@+id/editText_name_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your name"
+                android:hint="@string/enter_your_name"
                 android:paddingVertical="15dp"
                 android:paddingStart="12dp"
                 android:drawablePadding="10dp"
@@ -119,7 +117,7 @@
                 android:id="@+id/txt_remember"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Remember me"
+                android:text="@string/remember_me"
                 android:layout_marginStart="6dp"
                 app:layout_constraintStart_toEndOf="@+id/checkbox_login_activity"
                 app:layout_constraintBottom_toBottomOf="@+id/checkbox_login_activity"
@@ -160,20 +158,21 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textSignUpAccept"
                 android:textColor="@color/light_green"
                 app:layout_constraintTop_toTopOf="@+id/textSignUpAccept"
-                app:layout_constraintStart_toEndOf="@+id/textSignUpAccept" />
+                app:layout_constraintStart_toEndOf="@+id/textSignUpAccept"/>
 
             <Button
                 android:id="@+id/button_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="22dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/button_skip_login_activity"
                 android:background="@drawable/ic_rectangle_login"
                 android:text="@string/login"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@+id/txt_sing_up_with"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <Button
                 android:id="@+id/button_skip_login_activity"
@@ -181,12 +180,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_rectangle_skip"
                 android:text="@string/skip_for_now"
+                app:layout_constraintStart_toEndOf="@+id/button_submit"
                 android:textColor="@color/light_green"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/button_submit"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="24dp"
-                app:layout_constraintHorizontal_bias="0.497" />
+                android:layout_marginEnd="22dp"
+                app:layout_constraintHorizontal_bias="0.497"/>
 
             <TextView
                 android:id="@+id/txt_sing_up_with"
@@ -263,7 +263,7 @@
                 android:id="@+id/textView_signup_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="log in"
+                android:text="@string/log_in"
                 android:textColor="@color/dark_green"
                 android:textSize="12dp"
                 app:layout_constraintBottom_toBottomOf="@+id/don_t_have_an_account"

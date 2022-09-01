@@ -16,9 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-
 import androidx.annotation.NonNull;
-
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.CacheFlag;
@@ -33,7 +31,6 @@ import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.ixidev.gdpr.GDPRChecker;
 import com.brainque.cookry.R;
-
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;

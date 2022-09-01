@@ -56,7 +56,7 @@ public class HomeCategoryAdapter extends RecyclerView.Adapter<HomeCategoryAdapte
     public class ItemRowHolder extends RecyclerView.ViewHolder {
         public ImageView image;
         private TextView text_cat;
-        private RelativeLayout lyt_parent;
+        private RelativeLayout lyt_parent;///////////////
 
         private ItemRowHolder(View itemView) {
             super(itemView);

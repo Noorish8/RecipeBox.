@@ -28,8 +28,8 @@
     <string name="dialog_error">Error..</string>
     <string name="dialog_warning">Warning..</string>
     <string name="dialog_success">Success</string>
-    <string name="dialog_ok">OK</string>
-    <string name="dialog_no">NO</string>
+    <string name="dialog_ok">Logout</string>
+    <string name="dialog_no">Cancel</string>
     <string name="login_require">Login require click OK and go to login screen</string>
     <string name="logout_msg">Are you sure you want to logout?</string>
     <string name="dialog_logout">Logout</string>
@@ -141,5 +141,16 @@
     <string name="setting">Setting</string>
     <string name="profile">Profile</string>
     <string name="latest">Latest</string>
+    <string name="feature_recipes">Feature recipes</string>
+    <string name="saved">Saved</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="log_in">log in</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="what_do_you_want_to_cook_today">What do you, want to cook today?</string>
+    <string name="find_delicious_recipe_here">Find delicious recipe here</string>
+    <string name="category">Category</string>
+    <string name="popular_recips">Popular recips</string>
+    <string name="see_all">See all</string>
 
 </resources>

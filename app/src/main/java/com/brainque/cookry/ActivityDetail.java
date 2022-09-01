@@ -402,17 +402,17 @@ public class ActivityDetail extends AppCompatActivity {
                 } else {
                     final PrettyDialog dialog = new PrettyDialog(ActivityDetail.this);
                     dialog.setTitle(getString(R.string.dialog_warning))
-                            .setTitleColor(R.color.dialog_text)
+                            .setTitleColor(R.color.dark_green)
                             .setMessage(getString(R.string.login_require))
-                            .setMessageColor(R.color.dialog_text)
+                            .setMessageColor(R.color.light_green)
                             .setAnimationEnabled(false)
-                            .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                            .setIcon(R.drawable.ic_logout_d, R.color.white, new PrettyDialogCallback() {
                                 @Override
                                 public void onClick() {
                                     dialog.dismiss();
                                 }
                             })
-                            .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                            .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                                 @Override
                                 public void onClick() {
                                     dialog.dismiss();
@@ -423,7 +423,7 @@ public class ActivityDetail extends AppCompatActivity {
                                     startActivity(intent_login);
                                 }
                             })
-                            .addButton(getString(R.string.dialog_no), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                            .addButton(getString(R.string.dialog_no), R.color.dialog_white_text, R.color.green_light_btn, new PrettyDialogCallback() {
                                 @Override
                                 public void onClick() {
                                     dialog.dismiss();

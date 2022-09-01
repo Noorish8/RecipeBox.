@@ -56,8 +56,11 @@
 
 
     <color name="dark_bottom_color">#A4A4A4</color>
-
+    <color name="dark__black">#212121</color>
     <color name="yellow_rate">#FEC600</color>
     <color name="light_green">#25A04F</color>
+    <color name="light_bg">#E3FFEC</color>
+    <color name="green_light_btn">#D0FFE0</color>
+    <color name="gray_ing">#515151</color>
 
 </resources>

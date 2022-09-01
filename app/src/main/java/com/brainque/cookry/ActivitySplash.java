@@ -82,14 +82,14 @@ public class ActivitySplash extends Activity {
                                     .setMessage(str_msg)
                                     .setMessageColor(R.color.dialog_text)
                                     .setAnimationEnabled(false)
-                                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                                    .setIcon(R.drawable.ic_logout_d, R.color.white, new PrettyDialogCallback() {
                                         @Override
                                         public void onClick() {
                                             dialog.dismiss();
                                             finish();
                                         }
                                     })
-                                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                                         @Override
                                         public void onClick() {
                                             dialog.dismiss();
@@ -120,13 +120,13 @@ public class ActivitySplash extends Activity {
                                         .setMessage(getString(R.string.license_msg))
                                         .setMessageColor(R.color.dialog_text)
                                         .setAnimationEnabled(false)
-                                        .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                                        .setIcon(R.drawable.ic_logout_d, R.color.white, new PrettyDialogCallback() {
                                             @Override
                                             public void onClick() {
                                                 dialog.dismiss();
                                             }
                                         })
-                                        .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                                        .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                                             @Override
                                             public void onClick() {
                                                 dialog.dismiss();

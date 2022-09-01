@@ -265,17 +265,17 @@ public class ProfileEditActivity extends AppCompatActivity implements Validator.
         if (Constant.GET_SUCCESS_MSG == 0) {
             final PrettyDialog dialog = new PrettyDialog(this);
             dialog.setTitle(getString(R.string.dialog_error))
-                    .setTitleColor(R.color.dialog_color)
+                    .setTitleColor(R.color.dark_green)
                     .setMessage(strMessage)
-                    .setMessageColor(R.color.dialog_color)
+                    .setMessageColor(R.color.dark_green)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_cross, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.pdlg_color_white, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.dark_green, R.color.white, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
@@ -298,17 +298,17 @@ public class ProfileEditActivity extends AppCompatActivity implements Validator.
             MyApp.saveLogin(MyApp.getUserId(), strName, strEmail, saveType, saveAId);
             final PrettyDialog dialog = new PrettyDialog(this);
             dialog.setTitle(getString(R.string.dialog_success))
-                    .setTitleColor(R.color.dialog_color)
+                    .setTitleColor(R.color.dark_green)
                     .setMessage(strMessage)
-                    .setMessageColor(R.color.dialog_color)
+                    .setMessageColor(R.color.dark_green)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_success, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_success_icon, R.color.white, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.pdlg_color_white, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.white, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();

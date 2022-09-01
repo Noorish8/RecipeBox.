@@ -8,10 +8,10 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_shape" />
+        android:src="@drawable/ic_ing_dot" />
 
     <TextView
         android:id="@+id/textIngredient"

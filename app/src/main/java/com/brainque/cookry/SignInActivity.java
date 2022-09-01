@@ -353,13 +353,13 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
                     .setMessage(strMessage)
                     .setMessageColor(R.color.dialog_text)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_cross, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.dark_green, R.color.green_abt, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
@@ -580,17 +580,17 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
         if (Constant.GET_SUCCESS_MSG == 0) {
             final PrettyDialog dialog = new PrettyDialog(this);
             dialog.setTitle(getString(R.string.dialog_error))
-                    .setTitleColor(R.color.dialog_text)
+                    .setTitleColor(R.color.dark_green)
                     .setMessage(strMessage)
                     .setMessageColor(R.color.dialog_text)
                     .setAnimationEnabled(false)
-                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                    .setIcon(R.drawable.ic_cross, R.color.white, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
                         }
                     })
-                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dark_green, new PrettyDialogCallback() {
                         @Override
                         public void onClick() {
                             dialog.dismiss();
@@ -612,7 +612,7 @@ public class SignInActivity extends AppCompatActivity implements Validator.Valid
     private void setAcceptText() {
         TextDecorator
                 .decorate(tvSignInAccept, getString(R.string.sign_up_accept, getString(R.string.menu_privacy)))
-                .setTextColor(R.color.colorPrimary, getString(R.string.menu_privacy))
+                .setTextColor(R.color.dark_green, getString(R.string.menu_privacy))
                 .makeTextClickable(new OnTextClickListener() {
                     @Override
                     public void onClick(View view, String text) {

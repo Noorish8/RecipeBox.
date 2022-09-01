@@ -96,6 +96,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_4sdp"
                     android:src="@drawable/ic_dot" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -122,6 +123,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_4sdp"
                     android:src="@drawable/ic_dot" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -147,6 +149,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_4sdp"
                     android:src="@drawable/ic_dot" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -172,6 +175,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_4sdp"
                     android:src="@drawable/ic_dot" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -184,4 +188,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical" />
+
 </RelativeLayout>

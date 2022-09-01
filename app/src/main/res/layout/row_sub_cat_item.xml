@@ -36,8 +36,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:contentDescription="@string/app_name"
-                        android:src="@drawable/place_holder_medium"
-                        android:scaleType="fitXY" />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/place_holder_medium" />
 
                 </RelativeLayout>
 

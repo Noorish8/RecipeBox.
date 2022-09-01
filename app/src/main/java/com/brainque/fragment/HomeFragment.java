@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment {
     HomeLatestAdapter homeLatestAdapter;
     ArrayList<ItemLatest> mLatestList, mMostList;
     ArrayList<ItemCategory> mCatList;
-    Button btnCat, btnLatest, btnMost;
+    TextView btnCat, btnLatest, btnMost;//change btn to txt
     HomeMostAdapter homeMostAdapter;
     HomeCategoryAdapter homeCategoryAdapter;
     EditText edt_search;
@@ -101,22 +101,29 @@ public class HomeFragment extends Fragment {
 
         mScrollView = rootView.findViewById(R.id.scrollView);
         mProgressBar = rootView.findViewById(R.id.progressBar);
+
         mCatView = rootView.findViewById(R.id.rv_latest_cat);
+
         mLatestView = rootView.findViewById(R.id.rv_latest_recipe);
-        btnCat = rootView.findViewById(R.id.btn_latest_cat);
+
+        // btnCat = rootView.findViewById(R.id.btn_latest_cat);
         btnLatest = rootView.findViewById(R.id.btn_latest_recipe);
-        mMostView = rootView.findViewById(R.id.rv_latest_recipe_popular);
-        btnMost = rootView.findViewById(R.id.btn_latest_recipe_most);
+
+//        mMostView = rootView.findViewById(R.id.rv_latest_recipe_popular);
+//
+//        btnMost = rootView.findViewById(R.id.btn_latest_recipe_most);
+
         mSliderView = rootView.findViewById(R.id.rv_slider);
-        image_1 = rootView.findViewById(R.id.image_1);
-        image_2 = rootView.findViewById(R.id.image_2);
-        image_3 = rootView.findViewById(R.id.image_3);
+
+//        image_1 = rootView.findViewById(R.id.image_1);
+//        image_2 = rootView.findViewById(R.id.image_2);
+//        image_3 = rootView.findViewById(R.id.image_3);
         txt_slider_home = rootView.findViewById(R.id.txt_slider_home);
-        if (getResources().getString(R.string.isRTL).equals("true")) {
-            image_1.setRotation(180);
-            image_2.setRotation(180);
-            image_3.setRotation(180);
-        }
+//        if (getResources().getString(R.string.isRTL).equals("true")) {
+//            image_1.setRotation(180);
+//            image_2.setRotation(180);
+//            image_3.setRotation(180);
+//        }
 
         MyApp = MyApplication.getAppInstance();
 
@@ -144,15 +151,16 @@ public class HomeFragment extends Fragment {
         mLatestView.setFocusable(false);
         mLatestView.setNestedScrollingEnabled(false);
 
-        mMostView.setHasFixedSize(true);
+
+//        mMostView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager_most = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        mMostView.setLayoutManager(layoutManager_most);
-        mMostView.setFocusable(false);
-        mMostView.setNestedScrollingEnabled(false);
+        // mMostView.setLayoutManager(layoutManager_most);
+        // mMostView.setFocusable(false);
+        //mMostView.setNestedScrollingEnabled(false);
         edt_search = rootView.findViewById(R.id.edt_search);
-        mViewPager = rootView.findViewById(R.id.viewPager);
-        mViewPager.useScale();
-        mViewPager.removeAlpha();
+        //   mViewPager = rootView.findViewById(R.id.viewPager);
+//        mViewPager.useScale();
+        //  mViewPager.removeAlpha();
 
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
         jsObj.addProperty("method_name", "get_home_banner");
@@ -161,42 +169,42 @@ public class HomeFragment extends Fragment {
         }
 
 
-        onClick = new OnClick() {
-            @Override
-            public void position(int position, String type, String id, String title) {
-
-                Bundle bundle = new Bundle();
-                bundle.putString("name", title);
-                bundle.putString("Id", id);
-
-                FragmentManager fm = getFragmentManager();
-                SubCategoryFragment subCategoryFragment = new SubCategoryFragment();
-                subCategoryFragment.setArguments(bundle);
-                assert fm != null;
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.hide(HomeFragment.this);
-                ft.add(R.id.fragment1, subCategoryFragment, title);
-                ft.addToBackStack(title);
-                ft.commit();
-                ((ActivityMain) requireActivity()).setToolbarTitle(title);
-            }
-        };
+//        onClick = new OnClick() {
+//            @Override
+//            public void position(int position, String type, String id, String title) {
+//
+//                Bundle bundle = new Bundle();
+//                bundle.putString("name", title);
+//                bundle.putString("Id", id);
+//
+//                FragmentManager fm = getFragmentManager();
+//                SubCategoryFragment subCategoryFragment = new SubCategoryFragment();
+//                subCategoryFragment.setArguments(bundle);
+//                assert fm != null;
+//                FragmentTransaction ft = fm.beginTransaction();
+//                ft.hide(HomeFragment.this);
+//                ft.add(R.id.fragment1, subCategoryFragment, title);
+//                //ft.addToBackStack(title);
+//                ft.commit();
+//                ((ActivityMain) requireActivity()).setToolbarTitle(title);
+//            }
+//        };
         jsonUtils = new JsonUtils(requireActivity(), onClick);
 
-        btnCat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((ActivityMain) requireActivity()).highLightNavigation(2);
-                String categoryName = getString(R.string.home_category);
-                FragmentManager fm = getFragmentManager();
-                CategoryFragment f1 = new CategoryFragment();
-                assert fm != null;
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.fragment1, f1, categoryName);
-                ft.commit();
-                ((ActivityMain) requireActivity()).setToolbarTitle(categoryName);
-            }
-        });
+//        btnCat.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ((ActivityMain) requireActivity()).highLightNavigation(2);
+//                String categoryName = getString(R.string.home_category);
+//                FragmentManager fm = getFragmentManager();
+//                CategoryFragment f1 = new CategoryFragment();
+//                assert fm != null;
+//                FragmentTransaction ft = fm.beginTransaction();
+//                ft.replace(R.id.fragment1, f1, categoryName);
+//                ft.commit();
+//                ((ActivityMain) requireActivity()).setToolbarTitle(categoryName);
+//            }
+//        });
 
         btnLatest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -213,20 +221,20 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnMost.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((ActivityMain) requireActivity()).highLightNavigation(3);
-                String categoryName = getString(R.string.menu_most);
-                FragmentManager fm = getFragmentManager();
-                MostViewFragment f1 = new MostViewFragment();
-                assert fm != null;
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.fragment1, f1, categoryName);
-                ft.commit();
-                ((ActivityMain) requireActivity()).setToolbarTitle(categoryName);
-            }
-        });
+//        btnMost.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ((ActivityMain) requireActivity()).highLightNavigation(3);
+//                String categoryName = getString(R.string.menu_most);
+//                FragmentManager fm = getFragmentManager();
+//                MostViewFragment f1 = new MostViewFragment();
+//                assert fm != null;
+//                FragmentTransaction ft = fm.beginTransaction();
+//                ft.replace(R.id.fragment1, f1, categoryName);
+//                ft.commit();
+//                ((ActivityMain) requireActivity()).setToolbarTitle(categoryName);
+//            }
+//        });
 
         edt_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -301,13 +309,13 @@ public class HomeFragment extends Fragment {
 
     private void setResultSlider() {
         if (getActivity() != null) {
-        if (mSlider.size() == 0) {
-            mViewPager.setVisibility(View.GONE);
-        } else {
-            mViewPager.setVisibility(View.VISIBLE);
-            mAdapter = new CustomViewPagerAdapter();
-            mViewPager.setAdapter(mAdapter);
-        }
+            if (mSlider.size() == 0) {
+                //  mViewPager.setVisibility(View.GONE);
+            } else {
+                // mViewPager.setVisibility(View.VISIBLE);
+                mAdapter = new CustomViewPagerAdapter();
+                //  mViewPager.setAdapter(mAdapter);
+            }
         }
 
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
@@ -491,7 +499,7 @@ public class HomeFragment extends Fragment {
             mLatestView.setAdapter(homeLatestAdapter);
 
             homeMostAdapter = new HomeMostAdapter(getActivity(), mMostList);
-            mMostView.setAdapter(homeMostAdapter);
+            //  mMostView.setAdapter(homeMostAdapter);
 
             homeCategoryAdapter = new HomeCategoryAdapter(getActivity(), mCatList, onClick);
             mCatView.setAdapter(homeCategoryAdapter);
@@ -509,7 +517,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
 
@@ -554,7 +562,7 @@ public class HomeFragment extends Fragment {
                 return super.onOptionsItemSelected(menuItem);
         }
         return true;
-    }
+    }*/
 
     @Override
     public void onDestroy() {

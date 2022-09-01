@@ -146,14 +146,14 @@ public class AboutUsActivity extends AppCompatActivity {
                                     .setMessage(getString(R.string.restart_msg))
                                     .setMessageColor(R.color.dialog_text)
                                     .setAnimationEnabled(false)
-                                    .setIcon(R.drawable.pdlg_icon_close, R.color.dialog_color, new PrettyDialogCallback() {
+                                    .setIcon(R.drawable.ic_cross, R.color.dark_green, new PrettyDialogCallback() {
                                         @Override
                                         public void onClick() {
                                             dialog.dismiss();
                                             finish();
                                         }
                                     })
-                                    .addButton(getString(R.string.dialog_ok), R.color.dialog_white_text, R.color.dialog_color, new PrettyDialogCallback() {
+                                    .addButton(getString(R.string.dialog_ok), R.color.green_abt, R.color.dark_green, new PrettyDialogCallback() {
                                         @Override
                                         public void onClick() {
                                             dialog.dismiss();

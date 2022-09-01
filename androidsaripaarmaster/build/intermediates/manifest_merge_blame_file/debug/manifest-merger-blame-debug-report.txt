@@ -6,11 +6,11 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->E:\cookry_android\androidsaripaarmaster\src\main\AndroidManifest.xml
+8-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->E:\cookry_android\androidsaripaarmaster\src\main\AndroidManifest.xml
+9-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml
 10
 11    <application />
-11-->E:\cookry_android\androidsaripaarmaster\src\main\AndroidManifest.xml:7:5-32
+11-->F:\Capermint Projects\Recipe Box Package V2.4\Source Code\AndroidCode\RecipesBox_V2.4\androidsaripaarmaster\src\main\AndroidManifest.xml:7:5-32
 12
 13</manifest>
